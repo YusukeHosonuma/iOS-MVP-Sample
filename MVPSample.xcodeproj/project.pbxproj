@@ -18,6 +18,7 @@
 		701367DB2031A14100B0CFFF /* MVPSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367DA2031A14100B0CFFF /* MVPSampleUITests.swift */; };
 		701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367E82031A53B00B0CFFF /* LoginViewController.swift */; };
 		701367EB2031AC1D00B0CFFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 701367EA2031AC1D00B0CFFF /* GoogleService-Info.plist */; };
+		70651B59203262A7005FFFBF /* TodoAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70651B58203262A7005FFFBF /* TodoAddViewController.swift */; };
 		70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */; };
 		70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */; };
 		A830BB6B4319AC1C920D309A /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */; };
@@ -60,6 +61,7 @@
 		701367DC2031A14100B0CFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701367E82031A53B00B0CFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		701367EA2031AC1D00B0CFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70651B58203262A7005FFFBF /* TodoAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddViewController.swift; sourceTree = "<group>"; };
 		70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		7642EB0A2C430918D680740F /* Pods-MVPSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				701367C62031A14000B0CFFF /* Info.plist */,
 				701367E82031A53B00B0CFFF /* LoginViewController.swift */,
 				70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */,
+				70651B58203262A7005FFFBF /* TodoAddViewController.swift */,
 			);
 			path = MVPSample;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70651B59203262A7005FFFBF /* TodoAddViewController.swift in Sources */,
 				70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */,
 				701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */,
 				70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */,

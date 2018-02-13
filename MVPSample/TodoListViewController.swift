@@ -24,6 +24,14 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         self.presenter.listen()
     }
     
+    // MARK: - Action
+    
+    @IBAction func tapAddButton(_ sender: Any) {
+        self.presenter.add()
+    }
+    
+    // MARK: - UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.todos?.count ?? 0
     }
@@ -37,14 +45,20 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 extension TodoListViewController: TodoListViewProtocol {
+    
     func showList(todos: [String]) {
         self.todos = todos
         self.tableView.reloadData()
+    }
+    
+    func moveToAdd() {
+        self.performSegue(withIdentifier: "toAdd", sender: nil)
     }
 }
 
 protocol TodoListViewProtocol: LoadingViewProtocol {
     func showList(todos: [String])
+    func moveToAdd()
 }
 
 class TodoListPresenter {
@@ -55,6 +69,10 @@ class TodoListPresenter {
     init(view: TodoListViewProtocol) {
         self.view = view
         self.refTodo = Database.database().reference().child("todo")
+    }
+    
+    func add() {
+        self.view.moveToAdd()
     }
     
     func listen() {
