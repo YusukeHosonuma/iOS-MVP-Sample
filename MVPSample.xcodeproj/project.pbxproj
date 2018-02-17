@@ -22,6 +22,7 @@
 		70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */; };
 		70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */; };
 		A830BB6B4319AC1C920D309A /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */; };
+		E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCEC720386305009E7F9E /* Firebase+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7642EB0A2C430918D680740F /* Pods-MVPSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50CCEC720386305009E7F9E /* Firebase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+.swift"; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */,
+				E50CCEC720386305009E7F9E /* Firebase+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */,
 				70651B59203262A7005FFFBF /* TodoAddViewController.swift in Sources */,
 				70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */,
 				701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */,
