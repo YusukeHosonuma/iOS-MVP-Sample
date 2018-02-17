@@ -17,11 +17,11 @@ protocol TodoListViewProtocol: LoadingViewProtocol {
 class TodoListPresenter {
     
     let view: TodoListViewProtocol
-    let refTodo: DatabaseReference
+    let todoList: TodoList
     
-    init(view: TodoListViewProtocol) {
+    init(view: TodoListViewProtocol, todoList: TodoList) {
         self.view = view
-        self.refTodo = Database.database().reference().child("todo")
+        self.todoList = todoList
     }
     
     func add() {
@@ -30,11 +30,9 @@ class TodoListPresenter {
     
     func listen() {
         self.view.showLoading(message: nil)
-        // TODO: Modelとして切り出す
-        self.refTodo.observe(DataEventType.value) { (snapshot) in
+        self.todoList.observe { todos in
             self.view.hideLoading()
-            let titles = snapshot.childrenDictionary().map { $0["title"] ?? "" }
-            self.view.showList(todos: titles)
+            self.view.showList(todos: todos)
         }
     }
 }

@@ -26,6 +26,8 @@
 		E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECF20386889009E7F9E /* LoginPresenter.swift */; };
 		E50CCED3203868CA009E7F9E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED2203868CA009E7F9E /* Result.swift */; };
 		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
+		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
+		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		E50CCECF20386889009E7F9E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E50CCED2203868CA009E7F9E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
+		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E50CCECC203867C2009E7F9E /* Authentication.swift */,
+				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
 				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
+				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -539,7 +545,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */,
 				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
+				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
 				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
 				E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */,
