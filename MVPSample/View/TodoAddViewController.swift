@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class TodoAddViewController: UIViewController {
 
-    @IBOutlet weak var titleText: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     
     var ref: DatabaseReference!
     var presenter: TodoAddPresenter!
@@ -19,14 +19,20 @@ class TodoAddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = Database.database().reference()
-        self.presenter = TodoAddPresenter(todoList: TodoList()) // TODO: Singletonにすべきかも
+        self.presenter = TodoAddPresenter(view: self, todoList: TodoList()) // TODO: Singletonにすべきかも
     }
 
     // MARK: - Action
     
     @IBAction func tapAddButton(_ sender: Any) {
-        guard let title = self.titleText.text else { preconditionFailure() }
-        self.presenter.addTodo(title: title)
+        self.presenter.tapAddButton()
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension TodoAddViewController: TodoAddViewProtocol {
+    
+    var titleText: String {
+        return self.titleTextField.text!
     }
 }
