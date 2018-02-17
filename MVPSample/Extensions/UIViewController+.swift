@@ -11,17 +11,18 @@ import UIKit
 import SVProgressHUD
 
 protocol LoadingViewProtocol {
-    func showLoading()
+    func showLoading(message: String?)
     func hideLoading()
 }
 
 extension UIViewController: LoadingViewProtocol {
     
-    func showLoading() {
-        SVProgressHUD.show(withStatus: "ログイン中")
+    func showLoading(message: String?) {
+        SVProgressHUD.show(withStatus: message)
     }
     
     func hideLoading() {
         SVProgressHUD.dismiss()
     }
 }
+
