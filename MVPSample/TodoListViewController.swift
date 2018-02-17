@@ -76,7 +76,7 @@ class TodoListPresenter {
     }
     
     func listen() {
-        self.view.showLoading()
+        self.view.showLoading(message: nil)
         self.refTodo.observe(DataEventType.value) { (snapshot) in
             self.view.hideLoading()
             let titles = snapshot.childrenDictionary().map { $0["title"] ?? "" }
