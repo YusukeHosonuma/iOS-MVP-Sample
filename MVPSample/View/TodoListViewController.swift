@@ -42,6 +42,8 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = todo
         return cell
     }
+    
+    // TODO: 編集機能も欲しい
 }
 
 extension TodoListViewController: TodoListViewProtocol {
@@ -56,31 +58,3 @@ extension TodoListViewController: TodoListViewProtocol {
     }
 }
 
-protocol TodoListViewProtocol: LoadingViewProtocol {
-    func showList(todos: [String])
-    func moveToAdd()
-}
-
-class TodoListPresenter {
-    
-    let view: TodoListViewProtocol
-    let refTodo: DatabaseReference
-
-    init(view: TodoListViewProtocol) {
-        self.view = view
-        self.refTodo = Database.database().reference().child("todo")
-    }
-    
-    func add() {
-        self.view.moveToAdd()
-    }
-    
-    func listen() {
-        self.view.showLoading(message: nil)
-        self.refTodo.observe(DataEventType.value) { (snapshot) in
-            self.view.hideLoading()
-            let titles = snapshot.childrenDictionary().map { $0["title"] ?? "" }
-            self.view.showList(todos: titles)
-        }
-    }
-}

@@ -22,6 +22,10 @@
 		70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */; };
 		A830BB6B4319AC1C920D309A /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */; };
 		E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCEC720386305009E7F9E /* Firebase+.swift */; };
+		E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECC203867C2009E7F9E /* Authentication.swift */; };
+		E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECF20386889009E7F9E /* LoginPresenter.swift */; };
+		E50CCED3203868CA009E7F9E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED2203868CA009E7F9E /* Result.swift */; };
+		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50CCEC720386305009E7F9E /* Firebase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+.swift"; sourceTree = "<group>"; };
+		E50CCECC203867C2009E7F9E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		E50CCECF20386889009E7F9E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		E50CCED2203868CA009E7F9E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				E50CCEC9203866D1009E7F9E /* View */,
+				E50CCECE20386852009E7F9E /* Presenter */,
+				E50CCECB203867B0009E7F9E /* Model */,
+				E50CCED1203868B8009E7F9E /* Util */,
 				70DFDAB62031CB7000DE2F7D /* Extensions */,
 				E50CCECA20386700009E7F9E /* Resources */,
 				701367BA2031A13500B0CFFF /* AppDelegate.swift */,
@@ -189,6 +200,31 @@
 				701367EA2031AC1D00B0CFFF /* GoogleService-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E50CCECB203867B0009E7F9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E50CCECC203867C2009E7F9E /* Authentication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E50CCECE20386852009E7F9E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
+				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E50CCED1203868B8009E7F9E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E50CCED2203868CA009E7F9E /* Result.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		F6D61B99C079B190F3F089D1 /* Pods */ = {
@@ -503,6 +539,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
+				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
+				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
+				E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */,
 				E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */,
 				70651B59203262A7005FFFBF /* TodoAddViewController.swift in Sources */,
 				70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */,
