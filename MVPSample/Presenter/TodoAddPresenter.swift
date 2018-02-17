@@ -8,17 +8,22 @@
 
 import Foundation
 
-protocol TodoAddViewProtocol {}
+protocol TodoAddViewProtocol {
+    var titleText: String { get }
+}
 
 class TodoAddPresenter {
     
+    let view: TodoAddViewProtocol
     let todoList: TodoList
     
-    init(todoList: TodoList) {
+    init(view: TodoAddViewProtocol, todoList: TodoList) {
+        self.view = view
         self.todoList = todoList
     }
     
-    func addTodo(title: String) {
+    func tapAddButton() {
+        let title = view.titleText
         self.todoList.add(title: title)
     }
 }
