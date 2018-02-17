@@ -79,8 +79,12 @@ class TodoListPresenter {
         self.view.showLoading()
         self.refTodo.observe(DataEventType.value) { (snapshot) in
             self.view.hideLoading()
-            guard let todoDic = snapshot.value as? [String: [String: String]] else { return }
-            let titles = todoDic.values.map { $0["title"]! }
+            var titles: [String] = []
+            for item in snapshot.children {
+                let child = item as! DataSnapshot
+                let dic = child.value as! [String: String]
+                titles.append(dic["title"] ?? "")
+            }
             self.view.showList(todos: titles)
         }
     }
