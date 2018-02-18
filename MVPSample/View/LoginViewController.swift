@@ -14,7 +14,7 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
 
     var presenter: LoginPresenter!
-    
+
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
 
@@ -22,16 +22,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.presenter = LoginPresenter(view: self, model: Authentication())
     }
-    
+
     // MARK: - Action
-    
+
     @IBAction func tapLoginButton(_ sender: Any) {
         guard
             let email = self.emailText.text,
             let password = self.passwordText.text else { return }
         self.presenter.tapLogin(email: email, password: password)
     }
-    
+
     @IBAction func tapSignupButton(_ sender: Any) {
         guard
             let email = self.emailText.text,
@@ -51,7 +51,7 @@ extension LoginViewController: LoginViewProtocol {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     func showSignupError() {
         let alert = UIAlertController(title: "エラー", message: "サインアップに失敗しました。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -67,4 +67,3 @@ extension LoginViewController: LoginViewProtocol {
         self.present(alert, animated: true, completion: nil)
     }
 }
-

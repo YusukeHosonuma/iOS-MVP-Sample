@@ -16,15 +16,15 @@ protocol LoginViewProtocol: LoadingViewProtocol {
 }
 
 class LoginPresenter {
-    
+
     let view: LoginViewProtocol
     let model: AuthenticationProtocol
-    
+
     init(view: LoginViewProtocol, model: AuthenticationProtocol) {
         self.view = view
         self.model = model
     }
-    
+
     func tapLogin(email: String, password: String) {
         self.view.showLoading(message: "ログイン中")
         self.model.login(email: email, password: password) { result in
@@ -37,7 +37,7 @@ class LoginPresenter {
             }
         }
     }
-    
+
     func tapSignup(email: String, password: String) {
         self.view.showLoading(message: "サインアップ中")
         self.model.signup(email: email, password: password) { (result) in

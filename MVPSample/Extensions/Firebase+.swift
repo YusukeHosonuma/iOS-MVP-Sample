@@ -16,7 +16,7 @@ struct FirebaseModel<T> {
 }
 
 extension DatabaseReference {
-    func listen<T: Codable>(_ event: DataEventType, type: T.Type, callback: @escaping ([FirebaseModel<T>]) -> ()) {
+    func listen<T: Codable>(_ event: DataEventType, type: T.Type, callback: @escaping ([FirebaseModel<T>]) -> Void) {
         self.observe(event) { (snapshot) in
             let items = snapshot.items(type)
             callback(items)

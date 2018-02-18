@@ -19,7 +19,7 @@ protocol AuthenticationProtocol {
 }
 
 class Authentication: AuthenticationProtocol {
-    
+
     func login(email: String, password: String, handler: @escaping (Result<User, LoginError>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let user = user {
@@ -29,7 +29,7 @@ class Authentication: AuthenticationProtocol {
             }
         }
     }
-    
+
     func signup(email: String, password: String, handler: @escaping (Result<User, LoginError>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if let user = user {
@@ -39,7 +39,7 @@ class Authentication: AuthenticationProtocol {
             }
         }
     }
-    
+
     // TODO: 非同期処理を同期処理に変えたかったけどうまくいかなかった
     //    func login(email: String, password: String) -> Result<User, LoginError> {
     //
@@ -62,4 +62,3 @@ class Authentication: AuthenticationProtocol {
     //        return result
     //    }
 }
-
