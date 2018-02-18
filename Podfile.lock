@@ -47,6 +47,7 @@ PODS:
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
   - SVProgressHUD (2.2.2)
+  - SwiftFormat/CLI (0.33.1)
   - SwiftLint (0.25.0)
 
 DEPENDENCIES:
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - Firebase/Database
   - R.swift
   - SVProgressHUD
+  - SwiftFormat/CLI
   - SwiftLint
 
 SPEC CHECKSUMS:
@@ -73,8 +75,9 @@ SPEC CHECKSUMS:
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftFormat: f96d738ff37906fa1f32a99c8d3417a7856a9b80
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: a5e1d1d5dd6ace733184214b1ae062cb26ddc57f
+PODFILE CHECKSUM: 17f0da5005f55bfcd802d4a4c3002ada4eaf4dc6
 
 COCOAPODS: 1.4.0
