@@ -12,6 +12,8 @@ import FirebaseDatabase
 protocol TodoListViewProtocol: LoadingViewProtocol {
     func showList(todos: [Todo])
     func moveToAdd()
+    func moveToEdit(_ todo: Todo)
+    func todo(at index: Int) -> Todo
 }
 
 class TodoListPresenter {
@@ -26,6 +28,11 @@ class TodoListPresenter {
     
     func add() {
         self.view.moveToAdd()
+    }
+    
+    func selectRow(at index: Int) {
+        let todo = self.view.todo(at: index)
+        self.view.moveToEdit(todo)
     }
     
     func listen() {

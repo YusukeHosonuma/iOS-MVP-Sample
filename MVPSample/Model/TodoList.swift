@@ -18,13 +18,22 @@ class TodoList {
         self.todoRef.childByAutoId().setValue(value)
     }
     
+    func update(_ todo: Todo) {
+        guard let key = todo.key else { preconditionFailure() }
+        let value: [String: Any] = [
+            "title": todo.title,
+            "done" : todo.done
+            ]
+        self.todoRef.child(key).setValue(value)
+    }
+    
     func observe(f: @escaping ([Todo]) -> ()) {
         self.todoRef.observe(DataEventType.value) { (snapshot) in
-            let xs: [Todo] = snapshot.childrenDictionary().map {
+            let xs: [Todo] = snapshot.childrenDictionary().map { (key, value) in
                 // TODO: Codableを使いたい
-                let title = $0["title"] ?? ""
-                let done  = $0["done"].flatMap { Bool($0) } ?? false
-                return Todo(title: title, done: done)
+                let title = value["title"] as? String ?? ""
+                let done  = value["done"]  as? Bool   ?? false
+                return Todo(key: key, title: title, done: done)
             }
             f(xs)
         }

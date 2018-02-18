@@ -184,7 +184,7 @@
                                 <rect key="frame" x="142" y="168" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="tapAddButton:" destination="hn7-QI-1HU" eventType="touchUpInside" id="ma8-CF-qU0"/>
+                                    <action selector="tapDoneButton:" destination="hn7-QI-1HU" eventType="touchUpInside" id="z8Y-N6-KUI"/>
                                 </connections>
                             </button>
                         </subviews>

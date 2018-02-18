@@ -35,6 +35,13 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         self.presenter.listen()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? TodoAddViewController else { return }
+        if let todo = sender as? Todo {
+            destination.todo = todo
+        }
+    }
+    
     // MARK: - Action
     
     @IBAction func tapAddButton(_ sender: Any) {
@@ -54,10 +61,19 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    // TODO: 編集機能も欲しい
+    // MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.selectRow(at: indexPath.row)
+    }
 }
 
 extension TodoListViewController: TodoListViewProtocol {
+    
+    func todo(at index: Int) -> Todo {
+        guard let todo = self.todos?[index] else { preconditionFailure() }
+        return todo
+    }
     
     func showList(todos: [Todo]) {
         self.todos = todos
@@ -66,5 +82,9 @@ extension TodoListViewController: TodoListViewProtocol {
     
     func moveToAdd() {
         self.performSegue(withIdentifier: "toAdd", sender: nil)
+    }
+    
+    func moveToEdit(_ todo: Todo) {
+        self.performSegue(withIdentifier: "toAdd", sender: todo)
     }
 }

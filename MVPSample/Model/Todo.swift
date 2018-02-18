@@ -9,6 +9,13 @@
 import Foundation
 
 struct Todo {
-    let title: String
-    let done: Bool
+    let key: String?
+    var title: String
+    var done: Bool
+}
+
+extension Todo {
+    static func new(title: String) -> Todo {
+        return Todo(key: nil, title: title, done: false)
+    }
 }
