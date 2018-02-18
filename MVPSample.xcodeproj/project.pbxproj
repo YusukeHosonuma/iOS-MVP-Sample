@@ -29,6 +29,7 @@
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
+		E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3920398D6B00A9C90E /* AppContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		E5E31E3920398D6B00A9C90E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 				70DFDAB62031CB7000DE2F7D /* Extensions */,
 				E50CCECA20386700009E7F9E /* Resources */,
 				701367BA2031A13500B0CFFF /* AppDelegate.swift */,
+				E5E31E3920398D6B00A9C90E /* AppContext.swift */,
 				701367C62031A14000B0CFFF /* Info.plist */,
 			);
 			path = MVPSample;
@@ -553,6 +556,7 @@
 				E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */,
 				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
 				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
+				E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
 				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
 				E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */,
@@ -738,7 +742,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -753,7 +760,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -769,7 +779,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,7 +800,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -802,7 +820,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,7 +840,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
