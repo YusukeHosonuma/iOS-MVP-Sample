@@ -1,4 +1,5 @@
 PODS:
+  - CodableFirebase (0.0.6)
   - Firebase/Auth (4.8.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.1)
@@ -45,12 +46,14 @@ PODS:
   - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
+  - CodableFirebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - SVProgressHUD
 
 SPEC CHECKSUMS:
+  CodableFirebase: 5b541b593f279cc5afd9f174ecbc92bc2e72e964
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
@@ -63,6 +66,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 6f8c963b8b665802fbd4d207ad276f0117a856fb
+PODFILE CHECKSUM: 9d6e27183181d0f72b50c3fd9ecaed363189816a
 
 COCOAPODS: 1.4.0
