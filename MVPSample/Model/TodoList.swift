@@ -9,21 +9,24 @@
 import Foundation
 import FirebaseDatabase
 
-// TODO: Todoというドメインは欲しい
-
 class TodoList {
 
     var todoRef: DatabaseReference = Database.database().reference().child("todo")
 
-    func add(title: String) {
-        let value = ["title": title]
+    func add(todo: Todo) {
+        let value = ["title": todo.title]
         self.todoRef.childByAutoId().setValue(value)
     }
     
-    func observe(f: @escaping ([String]) -> ()) {
+    func observe(f: @escaping ([Todo]) -> ()) {
         self.todoRef.observe(DataEventType.value) { (snapshot) in
-            let titles = snapshot.childrenDictionary().map { $0["title"] ?? "" }
-            f(titles)
+            let xs: [Todo] = snapshot.childrenDictionary().map {
+                // TODO: Codableを使いたい
+                let title = $0["title"] ?? ""
+                let done  = $0["done"].flatMap { Bool($0) } ?? false
+                return Todo(title: title, done: done)
+            }
+            f(xs)
         }
     }
 }

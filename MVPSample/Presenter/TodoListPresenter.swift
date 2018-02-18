@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 
 protocol TodoListViewProtocol: LoadingViewProtocol {
-    func showList(todos: [String])
+    func showList(todos: [Todo])
     func moveToAdd()
 }
 

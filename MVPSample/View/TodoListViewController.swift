@@ -14,7 +14,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: TodoListPresenter!
-    var todos: [String]?
+    var todos: [Todo]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,8 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         guard let todo = self.todos?[indexPath.row] else { return cell }
-        cell.textLabel?.text = todo
+        cell.textLabel?.text = todo.title
+        // TODO: 完了マーク
         return cell
     }
     
@@ -48,7 +49,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 
 extension TodoListViewController: TodoListViewProtocol {
     
-    func showList(todos: [String]) {
+    func showList(todos: [Todo]) {
         self.todos = todos
         self.tableView.reloadData()
     }

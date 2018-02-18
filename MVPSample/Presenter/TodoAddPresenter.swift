@@ -23,7 +23,7 @@ class TodoAddPresenter {
     }
     
     func tapAddButton() {
-        let title = view.titleText
-        self.todoList.add(title: title)
+        let todo = Todo(title: self.view.titleText, done: false)
+        self.todoList.add(todo: todo)
     }
 }
