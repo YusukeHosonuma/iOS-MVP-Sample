@@ -8,32 +8,25 @@
 
 import Foundation
 import FirebaseDatabase
+import CodableFirebase
 
 class TodoList {
 
     var todoRef: DatabaseReference = Database.database().reference().child("todo")
 
     func add(todo: Todo) {
-        let value = ["title": todo.title]
-        self.todoRef.childByAutoId().setValue(value)
+        self.todoRef.childByAutoId().setValue(todo.firebaseValue)
     }
     
     func update(_ todo: Todo) {
         guard let key = todo.key else { preconditionFailure() }
-        let value: [String: Any] = [
-            "title": todo.title,
-            "done" : todo.done
-            ]
-        self.todoRef.child(key).setValue(value)
+        self.todoRef.child(key).setValue(todo.firebaseValue)
     }
     
     func observe(f: @escaping ([Todo]) -> ()) {
-        self.todoRef.observe(DataEventType.value) { (snapshot) in
-            let xs: [Todo] = snapshot.childrenDictionary().map { (key, value) in
-                // TODO: Codableを使いたい
-                let title = value["title"] as? String ?? ""
-                let done  = value["done"]  as? Bool   ?? false
-                return Todo(key: key, title: title, done: done)
+        self.todoRef.observe(.value) { (snapshot) in
+            let xs: [Todo] = snapshot.items(Todo.self).map { (key, value) in
+                return Todo(key: key, title: value.title, done: value.done)
             }
             f(xs)
         }

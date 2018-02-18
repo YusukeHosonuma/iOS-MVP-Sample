@@ -8,17 +8,20 @@
 
 import Foundation
 import FirebaseDatabase
-
-typealias FirebaseValue = (key: String, value: [String: Any])
+import CodableFirebase
 
 extension DataSnapshot {
-    func childrenDictionary() -> [FirebaseValue] {
-        var items: [FirebaseValue] = []
+    func items<T: Codable>(_ type: T.Type) -> [(key: String, value: T)] {
+        var xs: [(key: String, value: T)] = []
         for child in self.children {
             let snapshot = child as! DataSnapshot
-            let value = snapshot.value as! [String: Any]
-            items.append(FirebaseValue(key: snapshot.key, value))
+            do {
+                let value = try FirebaseDecoder().decode(type, from: snapshot.value!)
+                xs.append((key: snapshot.key, value))
+            } catch let error {
+                print(error) // TODO: KVS構造の変更には弱い（トレードオフ）
+            }
         }
-        return items
+        return xs
     }
 }
