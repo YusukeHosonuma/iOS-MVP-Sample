@@ -25,7 +25,7 @@ class TodoListPresenter {
         self.todoList = todoList
     }
 
-    func add() {
+    func tapAddButton() {
         view.moveToAdd()
     }
 
