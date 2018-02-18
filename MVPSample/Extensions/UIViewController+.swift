@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import UIKit
 import SVProgressHUD
+import UIKit
 
 protocol LoadingViewProtocol {
     func showLoading(message: String?)
@@ -16,7 +16,6 @@ protocol LoadingViewProtocol {
 }
 
 extension UIViewController: LoadingViewProtocol {
-
     func showLoading(message: String?) {
         SVProgressHUD.show(withStatus: message)
     }

@@ -264,7 +264,8 @@
 			buildPhases = (
 				5F57024ADA76383665516B2A /* [CP] Check Pods Manifest.lock */,
 				2A5473AE20C11D1968390F49 /* [CP-User] 1. R.swift */,
-				825C3681804E7DDD122F855C /* [CP-User] 2. SwiftLint */,
+				01CA209A88A47A496588CC77 /* [CP-User] 2. SwiftFormat */,
+				8D12672CC7C5F3505AA2A284 /* [CP-User] 3. SwiftLint */,
 				701367B32031A13500B0CFFF /* Sources */,
 				701367B42031A13500B0CFFF /* Frameworks */,
 				701367B52031A13500B0CFFF /* Resources */,
@@ -394,6 +395,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01CA209A88A47A496588CC77 /* [CP-User] 2. SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] 2. SwiftFormat";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\"";
+			showEnvVarsInLog = 0;
+		};
 		2A5473AE20C11D1968390F49 /* [CP-User] 1. R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,14 +491,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		825C3681804E7DDD122F855C /* [CP-User] 2. SwiftLint */ = {
+		8D12672CC7C5F3505AA2A284 /* [CP-User] 3. SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP-User] 2. SwiftLint";
+			name = "[CP-User] 3. SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

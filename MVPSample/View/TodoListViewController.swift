@@ -6,33 +6,32 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import UIKit
 import FirebaseDatabase
+import UIKit
 
 class TodoListCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
 }
 
 extension TodoListCell {
     func apply(_ todo: Todo) {
-        self.titleLabel?.text = todo.title
-        self.accessoryType = todo.done ? .checkmark : .none
+        titleLabel?.text = todo.title
+        accessoryType = todo.done ? .checkmark : .none
     }
 }
 
 class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
 
     var presenter: TodoListPresenter!
     var todos: [Todo]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.presenter = TodoListPresenter(view: self, todoList: appContext.todoList)
-        self.presenter.listen()
+        tableView.delegate = self
+        tableView.dataSource = self
+        presenter = TodoListPresenter(view: self, todoList: appContext.todoList)
+        presenter.listen()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,14 +43,14 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 
     // MARK: - Action
 
-    @IBAction func tapAddButton(_ sender: Any) {
-        self.presenter.add()
+    @IBAction func tapAddButton(_: Any) {
+        presenter.add()
     }
 
     // MARK: - UITableViewDataSource
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.todos?.count ?? 0
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return todos?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,13 +62,12 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 
     // MARK: UITableViewDelegate
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.selectRow(at: indexPath.row)
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.selectRow(at: indexPath.row)
     }
 }
 
 extension TodoListViewController: TodoListViewProtocol {
-
     func todo(at index: Int) -> Todo {
         guard let todo = self.todos?[index] else { preconditionFailure() }
         return todo
@@ -77,14 +75,14 @@ extension TodoListViewController: TodoListViewProtocol {
 
     func showList(todos: [Todo]) {
         self.todos = todos
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 
     func moveToAdd() {
-        self.performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
+        performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
     }
 
     func moveToEdit(_ todo: Todo) {
-        self.performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
+        performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
     }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import Foundation
 import FirebaseDatabase
+import Foundation
 
 protocol TodoListViewProtocol: LoadingViewProtocol {
     func showList(todos: [Todo])
@@ -17,7 +17,6 @@ protocol TodoListViewProtocol: LoadingViewProtocol {
 }
 
 class TodoListPresenter {
-
     let view: TodoListViewProtocol
     let todoList: TodoList
 
@@ -27,17 +26,17 @@ class TodoListPresenter {
     }
 
     func add() {
-        self.view.moveToAdd()
+        view.moveToAdd()
     }
 
     func selectRow(at index: Int) {
-        let todo = self.view.todo(at: index)
-        self.view.moveToEdit(todo)
+        let todo = view.todo(at: index)
+        view.moveToEdit(todo)
     }
 
     func listen() {
-        self.view.showLoading(message: nil)
-        self.todoList.observe { todos in
+        view.showLoading(message: nil)
+        todoList.observe { todos in
             self.view.hideLoading()
             self.view.showList(todos: todos)
         }

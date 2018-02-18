@@ -14,7 +14,6 @@ protocol TodoAddViewProtocol {
 }
 
 class TodoAddPresenter {
-
     var view: TodoAddViewProtocol
     let todo: Todo?
     let todoList: TodoList
@@ -23,28 +22,28 @@ class TodoAddPresenter {
         self.view = view
         self.todo = todo
         self.todoList = todoList
-        self.show()
+        show()
     }
 
     private func show() {
         if let title = self.todo?.title {
-            self.view.titleText = title
+            view.titleText = title
         }
     }
 
     // TODO: validation
 
     func tapAddButton() {
-        let todo = Todo.new(title: self.view.titleText)
-        self.todoList.add(todo: todo)
-        self.view.moveBack()
+        let todo = Todo.new(title: view.titleText)
+        todoList.add(todo: todo)
+        view.moveBack()
     }
 
     func tapDoneButton() {
         guard var todo = self.todo else { preconditionFailure() }
-        todo.title = self.view.titleText
-        todo.done  = true
-        self.todoList.update(todo)
-        self.view.moveBack()
+        todo.title = view.titleText
+        todo.done = true
+        todoList.update(todo)
+        view.moveBack()
     }
 }
