@@ -6,11 +6,10 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import XCTest
 @testable import MVPSample
+import XCTest
 
 class MVPSampleTests: XCTestCase {
-
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,9 +27,8 @@ class MVPSampleTests: XCTestCase {
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

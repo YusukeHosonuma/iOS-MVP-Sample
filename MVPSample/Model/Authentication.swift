@@ -6,8 +6,8 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import Foundation
 import FirebaseAuth
+import Foundation
 
 enum LoginError: Error {
     case unknown
@@ -19,9 +19,8 @@ protocol AuthenticationProtocol {
 }
 
 class Authentication: AuthenticationProtocol {
-
     func login(email: String, password: String, handler: @escaping (Result<User, LoginError>) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { user, _ in
             if let user = user {
                 handler(.success(user))
             } else {
@@ -31,7 +30,7 @@ class Authentication: AuthenticationProtocol {
     }
 
     func signup(email: String, password: String, handler: @escaping (Result<User, LoginError>) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { user, _ in
             if let user = user {
                 handler(.success(user))
             } else {

@@ -6,27 +6,26 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import Foundation
-import FirebaseDatabase
 import CodableFirebase
+import FirebaseDatabase
+import Foundation
 
 class TodoList {
-
     var todoRef: DatabaseReference = Database.database().reference().child("todo")
 
     func add(todo: Todo) {
-        self.todoRef.childByAutoId().setValue(todo.firebaseValue)
+        todoRef.childByAutoId().setValue(todo.firebaseValue)
     }
 
     func update(_ todo: Todo) {
         guard let key = todo.key else { preconditionFailure() }
-        self.todoRef.child(key).setValue(todo.firebaseValue)
+        todoRef.child(key).setValue(todo.firebaseValue)
     }
 
     func observe(f: @escaping ([Todo]) -> Void) {
-        self.todoRef.listen(.value, type: Todo.self) { model in
+        todoRef.listen(.value, type: Todo.self) { model in
             let xs: [Todo] = model.map {
-                let key   = $0.key
+                let key = $0.key
                 let value = $0.value
                 return Todo(key: key, title: value.title, done: value.done)
             }

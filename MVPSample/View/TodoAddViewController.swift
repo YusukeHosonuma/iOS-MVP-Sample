@@ -6,12 +6,11 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import UIKit
 import FirebaseDatabase
+import UIKit
 
 class TodoAddViewController: UIViewController {
-
-    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet var titleTextField: UITextField!
 
     var presenter: TodoAddPresenter!
 
@@ -19,32 +18,31 @@ class TodoAddViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = TodoAddPresenter(view: self, todo: self.todo, todoList: appContext.todoList)
+        presenter = TodoAddPresenter(view: self, todo: todo, todoList: appContext.todoList)
     }
 
     // MARK: - Action
 
-    @IBAction func tapAddButton(_ sender: Any) {
-        self.presenter.tapAddButton()
+    @IBAction func tapAddButton(_: Any) {
+        presenter.tapAddButton()
     }
 
-    @IBAction func tapDoneButton(_ sender: Any) {
-        self.presenter.tapDoneButton()
+    @IBAction func tapDoneButton(_: Any) {
+        presenter.tapDoneButton()
     }
 }
 
 extension TodoAddViewController: TodoAddViewProtocol {
-
     var titleText: String {
         get {
-            return self.titleTextField.text!
+            return titleTextField.text!
         }
         set {
-            self.titleTextField.text! = newValue
+            titleTextField.text! = newValue
         }
     }
 
     func moveBack() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

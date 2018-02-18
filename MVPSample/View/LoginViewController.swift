@@ -6,56 +6,54 @@
 //  Copyright © 2018 Yusuke. All rights reserved.
 //
 
-import UIKit
 import Firebase
 import FirebaseAuth
+import UIKit
 
 // TODO: ログイン状態を維持したい
 class LoginViewController: UIViewController {
-
     var presenter: LoginPresenter!
 
-    @IBOutlet weak var emailText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet var emailText: UITextField!
+    @IBOutlet var passwordText: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = LoginPresenter(view: self, model: Authentication())
+        presenter = LoginPresenter(view: self, model: Authentication())
     }
 
     // MARK: - Action
 
-    @IBAction func tapLoginButton(_ sender: Any) {
+    @IBAction func tapLoginButton(_: Any) {
         guard
             let email = self.emailText.text,
             let password = self.passwordText.text else { return }
-        self.presenter.tapLogin(email: email, password: password)
+        presenter.tapLogin(email: email, password: password)
     }
 
-    @IBAction func tapSignupButton(_ sender: Any) {
+    @IBAction func tapSignupButton(_: Any) {
         guard
             let email = self.emailText.text,
             let password = self.passwordText.text else { return }
-        self.presenter.tapSignup(email: email, password: password)
+        presenter.tapSignup(email: email, password: password)
     }
 }
 
 extension LoginViewController: LoginViewProtocol {
-
     func toList() {
-        self.performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
+        performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
     }
 
     func showLoginError() {
         let alert = UIAlertController(title: "エラー", message: "ログインに失敗しました。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 
     func showSignupError() {
         let alert = UIAlertController(title: "エラー", message: "サインアップに失敗しました。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 
     func showSignupSuccessDialog() {
@@ -64,6 +62,6 @@ extension LoginViewController: LoginViewProtocol {
                                       message: "ログインを行ってください。",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
