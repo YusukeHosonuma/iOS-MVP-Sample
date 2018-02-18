@@ -9,6 +9,9 @@
 import Foundation
 
 protocol LoginViewProtocol: LoadingViewProtocol {
+    var email: String { get }
+    var password: String { get }
+
     func toList()
     func showLoginError()
     func showSignupError()
@@ -17,16 +20,16 @@ protocol LoginViewProtocol: LoadingViewProtocol {
 
 class LoginPresenter {
     let view: LoginViewProtocol
-    let model: AuthenticationProtocol
+    let authentication: AuthenticationProtocol
 
     init(view: LoginViewProtocol, model: AuthenticationProtocol) {
         self.view = view
-        self.model = model
+        self.authentication = model
     }
 
-    func tapLogin(email: String, password: String) {
+    func tapLoginButton() {
         view.showLoading(message: "ログイン中")
-        model.login(email: email, password: password) { result in
+        authentication.login(email: view.email, password: view.password) { result in
             self.view.hideLoading()
             switch result {
             case .success:
@@ -37,9 +40,9 @@ class LoginPresenter {
         }
     }
 
-    func tapSignup(email: String, password: String) {
+    func tapSignupButton() {
         view.showLoading(message: "サインアップ中")
-        model.signup(email: email, password: password) { result in
+        authentication.signup(email: view.email, password: view.password) { result in
             self.view.hideLoading()
             switch result {
             case .success:
@@ -50,3 +53,4 @@ class LoginPresenter {
         }
     }
 }
+

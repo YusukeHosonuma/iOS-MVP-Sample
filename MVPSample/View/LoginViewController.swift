@@ -25,21 +25,23 @@ class LoginViewController: UIViewController {
     // MARK: - Action
 
     @IBAction func tapLoginButton(_: Any) {
-        guard
-            let email = self.emailText.text,
-            let password = self.passwordText.text else { return }
-        presenter.tapLogin(email: email, password: password)
+        presenter.tapLoginButton()
     }
 
     @IBAction func tapSignupButton(_: Any) {
-        guard
-            let email = self.emailText.text,
-            let password = self.passwordText.text else { return }
-        presenter.tapSignup(email: email, password: password)
+        presenter.tapSignupButton()
     }
 }
 
 extension LoginViewController: LoginViewProtocol {
+    var email: String {
+        return emailText.text ?? ""
+    }
+
+    var password: String {
+        return passwordText.text ?? ""
+    }
+
     func toList() {
         performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
     }

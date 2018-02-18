@@ -44,7 +44,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Action
 
     @IBAction func tapAddButton(_: Any) {
-        presenter.add()
+        presenter.tapAddButton()
     }
 
     // MARK: - UITableViewDataSource
