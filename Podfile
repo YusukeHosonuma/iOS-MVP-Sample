@@ -9,8 +9,9 @@ target 'MVPSample' do
   # Pods for MVPSample
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'SVProgressHUD'
   pod 'Firebase/Database'
+  pod 'CodableFirebase'
+  pod 'SVProgressHUD'
   
   target 'MVPSampleTests' do
     inherit! :search_paths
