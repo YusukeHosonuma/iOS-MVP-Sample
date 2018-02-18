@@ -30,9 +30,9 @@ class LoginPresenter {
         self.model.login(email: email, password: password) { result in
             self.view.hideLoading()
             switch result {
-            case .success(_):
+            case .success:
                 self.view.toList()
-            case .error(_):
+            case .error:
                 self.view.showLoginError()
             }
         }
@@ -43,9 +43,9 @@ class LoginPresenter {
         self.model.signup(email: email, password: password) { (result) in
             self.view.hideLoading()
             switch result {
-            case .success(_):
+            case .success:
                 self.view.showSignupSuccessDialog()
-            case .error(_):
+            case .error:
                 self.view.showSignupError()
             }
         }
