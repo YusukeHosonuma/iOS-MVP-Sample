@@ -2,3 +2,4 @@ Pods
 GoogleService-Info.plist
 xcuserdata
 .idea
+*.generated.swift
