@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+// TODO: ログイン状態を維持したい
 class LoginViewController: UIViewController {
 
     var presenter: LoginPresenter!

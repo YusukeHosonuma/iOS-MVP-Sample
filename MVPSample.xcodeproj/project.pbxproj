@@ -28,6 +28,7 @@
 		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
+		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
+		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				E50CCECC203867C2009E7F9E /* Authentication.swift */,
+				E5D96EE520393055009314C8 /* Todo.swift */,
 				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
@@ -556,6 +559,7 @@
 				70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */,
 				701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */,
 				70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */,
+				E5D96EE620393055009314C8 /* Todo.swift in Sources */,
 				701367BB2031A13500B0CFFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

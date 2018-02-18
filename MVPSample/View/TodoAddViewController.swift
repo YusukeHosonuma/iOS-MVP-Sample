@@ -15,24 +15,38 @@ class TodoAddViewController: UIViewController {
     
     var ref: DatabaseReference!
     var presenter: TodoAddPresenter!
+    
+    var todo: Todo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = Database.database().reference()
-        self.presenter = TodoAddPresenter(view: self, todoList: TodoList()) // TODO: Singletonにすべきかも
+        self.presenter = TodoAddPresenter(view: self, todo: self.todo, todoList: TodoList()) // TODO: Singletonにすべきかも
     }
 
     // MARK: - Action
     
     @IBAction func tapAddButton(_ sender: Any) {
         self.presenter.tapAddButton()
-        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func tapDoneButton(_ sender: Any) {
+        self.presenter.tapDoneButton()
     }
 }
 
 extension TodoAddViewController: TodoAddViewProtocol {
     
     var titleText: String {
-        return self.titleTextField.text!
+        get {
+            return self.titleTextField.text!
+        }
+        set {
+            self.titleTextField.text! = newValue
+        }
+    }
+
+    func moveBack() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
