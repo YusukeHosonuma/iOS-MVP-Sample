@@ -55,7 +55,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TodoListCell else { preconditionFailure() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.cell, for: indexPath)!
         guard let todo = self.todos?[indexPath.row] else { return cell }
         cell.apply(todo)
         return cell
