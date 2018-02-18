@@ -13,14 +13,12 @@ class TodoAddViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     
-    var ref: DatabaseReference!
     var presenter: TodoAddPresenter!
     
     var todo: Todo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.ref = Database.database().reference()
         self.presenter = TodoAddPresenter(view: self, todo: self.todo, todoList: TodoList()) // TODO: Singletonにすべきかも
     }
 
