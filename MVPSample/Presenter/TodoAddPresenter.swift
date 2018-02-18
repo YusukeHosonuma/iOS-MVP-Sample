@@ -32,6 +32,8 @@ class TodoAddPresenter {
         }
     }
     
+    // TODO: validation
+    
     func tapAddButton() {
         let todo = Todo.new(title: self.view.titleText)
         self.todoList.add(todo: todo)
