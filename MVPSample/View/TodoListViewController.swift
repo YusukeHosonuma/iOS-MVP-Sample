@@ -9,6 +9,17 @@
 import UIKit
 import FirebaseDatabase
 
+class TodoListCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+}
+
+extension TodoListCell {
+    func apply(_ todo: Todo) {
+        self.titleLabel?.text = todo.title
+        self.accessoryType = todo.done ? .checkmark : .none
+    }
+}
+
 class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -37,10 +48,9 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TodoListCell else { preconditionFailure() }
         guard let todo = self.todos?[indexPath.row] else { return cell }
-        cell.textLabel?.text = todo.title
-        // TODO: 完了マーク
+        cell.apply(todo)
         return cell
     }
     
@@ -58,4 +68,3 @@ extension TodoListViewController: TodoListViewProtocol {
         self.performSegue(withIdentifier: "toAdd", sender: nil)
     }
 }
-
