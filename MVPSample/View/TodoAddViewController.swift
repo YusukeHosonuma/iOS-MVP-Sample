@@ -19,7 +19,7 @@ class TodoAddViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = TodoAddPresenter(view: self, todo: self.todo, todoList: TodoList()) // TODO: Singletonにすべきかも
+        self.presenter = TodoAddPresenter(view: self, todo: self.todo, todoList: appContext.todoList)
     }
 
     // MARK: - Action

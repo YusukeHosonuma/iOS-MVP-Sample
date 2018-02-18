@@ -31,7 +31,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.presenter = TodoListPresenter(view: self, todoList: TodoList()) // TODO: Singletonに
+        self.presenter = TodoListPresenter(view: self, todoList: appContext.todoList)
         self.presenter.listen()
     }
     
