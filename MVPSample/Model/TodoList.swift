@@ -24,8 +24,8 @@ class TodoList {
     }
     
     func observe(f: @escaping ([Todo]) -> ()) {
-        self.todoRef.observe(.value) { (snapshot) in
-            let xs: [Todo] = snapshot.items(Todo.self).map { (key, value) in
+        self.todoRef.listen(.value, type: Todo.self) { todos in
+            let xs: [Todo] = todos.map { (key, value) in
                 return Todo(key: key, title: value.title, done: value.done)
             }
             f(xs)

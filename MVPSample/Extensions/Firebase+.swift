@@ -10,6 +10,15 @@ import Foundation
 import FirebaseDatabase
 import CodableFirebase
 
+extension DatabaseReference {
+    func listen<T: Codable>(_ event: DataEventType, type: T.Type, callback: @escaping ([(key: String, value: T)]) -> ()) {
+        self.observe(event) { (snapshot) in
+            let items = snapshot.items(type)
+            callback(items)
+        }
+    }
+}
+
 extension DataSnapshot {
     func items<T: Codable>(_ type: T.Type) -> [(key: String, value: T)] {
         var xs: [(key: String, value: T)] = []
