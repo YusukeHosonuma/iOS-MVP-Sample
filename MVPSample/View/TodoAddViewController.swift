@@ -12,9 +12,9 @@ import FirebaseDatabase
 class TodoAddViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
-    
+
     var presenter: TodoAddPresenter!
-    
+
     var todo: Todo?
 
     override func viewDidLoad() {
@@ -23,18 +23,18 @@ class TodoAddViewController: UIViewController {
     }
 
     // MARK: - Action
-    
+
     @IBAction func tapAddButton(_ sender: Any) {
         self.presenter.tapAddButton()
     }
-    
+
     @IBAction func tapDoneButton(_ sender: Any) {
         self.presenter.tapDoneButton()
     }
 }
 
 extension TodoAddViewController: TodoAddViewProtocol {
-    
+
     var titleText: String {
         get {
             return self.titleTextField.text!

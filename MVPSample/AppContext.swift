@@ -11,8 +11,8 @@ import Foundation
 let appContext = AppContext()
 
 class AppContext {
-    
+
     fileprivate init() {}
-    
+
     let todoList = TodoList()
 }

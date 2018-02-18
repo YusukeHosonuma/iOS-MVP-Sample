@@ -17,24 +17,24 @@ protocol TodoListViewProtocol: LoadingViewProtocol {
 }
 
 class TodoListPresenter {
-    
+
     let view: TodoListViewProtocol
     let todoList: TodoList
-    
+
     init(view: TodoListViewProtocol, todoList: TodoList) {
         self.view = view
         self.todoList = todoList
     }
-    
+
     func add() {
         self.view.moveToAdd()
     }
-    
+
     func selectRow(at index: Int) {
         let todo = self.view.todo(at: index)
         self.view.moveToEdit(todo)
     }
-    
+
     func listen() {
         self.view.showLoading(message: nil)
         self.todoList.observe { todos in

@@ -17,13 +17,13 @@ class TodoList {
     func add(todo: Todo) {
         self.todoRef.childByAutoId().setValue(todo.firebaseValue)
     }
-    
+
     func update(_ todo: Todo) {
         guard let key = todo.key else { preconditionFailure() }
         self.todoRef.child(key).setValue(todo.firebaseValue)
     }
-    
-    func observe(f: @escaping ([Todo]) -> ()) {
+
+    func observe(f: @escaping ([Todo]) -> Void) {
         self.todoRef.listen(.value, type: Todo.self) { model in
             let xs: [Todo] = model.map {
                 let key   = $0.key

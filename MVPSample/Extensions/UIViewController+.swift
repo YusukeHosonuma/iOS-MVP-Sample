@@ -16,13 +16,12 @@ protocol LoadingViewProtocol {
 }
 
 extension UIViewController: LoadingViewProtocol {
-    
+
     func showLoading(message: String?) {
         SVProgressHUD.show(withStatus: message)
     }
-    
+
     func hideLoading() {
         SVProgressHUD.dismiss()
     }
 }
-
