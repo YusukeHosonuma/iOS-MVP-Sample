@@ -30,6 +30,7 @@
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
 		E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3920398D6B00A9C90E /* AppContext.swift */; };
+		E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3C2039917D00A9C90E /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E5E31E3920398D6B00A9C90E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		E5E31E3C2039917D00A9C90E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				701367B82031A13500B0CFFF /* Products */,
 				F6D61B99C079B190F3F089D1 /* Pods */,
 				055A38D5D7A65928C823DDC2 /* Frameworks */,
+				E5E31E3C2039917D00A9C90E /* R.generated.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +263,7 @@
 			buildConfigurationList = 701367DF2031A14100B0CFFF /* Build configuration list for PBXNativeTarget "MVPSample" */;
 			buildPhases = (
 				5F57024ADA76383665516B2A /* [CP] Check Pods Manifest.lock */,
+				9D601A3813AD6DD28F2730C6 /* [CP-User] R.swift */,
 				701367B32031A13500B0CFFF /* Sources */,
 				701367B42031A13500B0CFFF /* Frameworks */,
 				701367B52031A13500B0CFFF /* Resources */,
@@ -465,6 +469,7 @@
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -474,6 +479,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -481,6 +487,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D601A3813AD6DD28F2730C6 /* [CP-User] R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 			showEnvVarsInLog = 0;
 		};
 		ADB722443A8F0188FBD8C674 /* [CP] Check Pods Manifest.lock */ = {
@@ -555,6 +576,7 @@
 			files = (
 				E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */,
 				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
+				E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */,
 				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
 				E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
