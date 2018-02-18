@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewProtocol {
 
     func toList() {
-        self.performSegue(withIdentifier: "toList", sender: nil)
+        self.performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
     }
 
     func showLoginError() {

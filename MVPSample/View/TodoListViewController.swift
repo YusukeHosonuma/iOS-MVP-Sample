@@ -36,9 +36,9 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? TodoAddViewController else { return }
+        guard let info = R.segue.todoListViewController.toAdd(segue: segue) else { return }
         if let todo = sender as? Todo {
-            destination.todo = todo
+            info.destination.todo = todo
         }
     }
     
@@ -55,7 +55,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TodoListCell else { preconditionFailure() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.cell, for: indexPath)!
         guard let todo = self.todos?[indexPath.row] else { return cell }
         cell.apply(todo)
         return cell
@@ -81,10 +81,10 @@ extension TodoListViewController: TodoListViewProtocol {
     }
     
     func moveToAdd() {
-        self.performSegue(withIdentifier: "toAdd", sender: nil)
+        self.performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
     }
     
     func moveToEdit(_ todo: Todo) {
-        self.performSegue(withIdentifier: "toAdd", sender: todo)
+        self.performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
     }
 }
