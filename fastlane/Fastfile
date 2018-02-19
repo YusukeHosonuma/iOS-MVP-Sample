@@ -14,7 +14,13 @@ default_platform(:ios)
 platform :ios do
 
   lane :build do
-    build_app(workspace: "MVPSample.xcworkspace", scheme: "MVPSample")
+    cocoapods
+    build_app(
+      workspace: "MVPSample.xcworkspace", 
+      scheme: "MVPSample",
+      configuration: "Debug",
+      export_xcargs: "-allowProvisioningUpdates",
+    )
   end
 
   desc "Push a new release build to the App Store"
