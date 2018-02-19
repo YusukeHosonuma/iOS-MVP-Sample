@@ -28,6 +28,7 @@
 		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
+		E52757BC203B331600B031BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E52757BB203B331500B031BD /* GoogleService-Info.plist */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
 		E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3920398D6B00A9C90E /* AppContext.swift */; };
 		E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3C2039917D00A9C90E /* R.generated.swift */; };
@@ -82,6 +83,7 @@
 		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
+		E52757BB203B331500B031BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E5E31E3920398D6B00A9C90E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		E5E31E3C2039917D00A9C90E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				701367BA2031A13500B0CFFF /* AppDelegate.swift */,
 				E5E31E3920398D6B00A9C90E /* AppContext.swift */,
 				701367C62031A14000B0CFFF /* Info.plist */,
+				E52757BB203B331500B031BD /* GoogleService-Info.plist */,
 			);
 			path = MVPSample;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			files = (
 				701367C52031A14000B0CFFF /* LaunchScreen.storyboard in Resources */,
 				701367EB2031AC1D00B0CFFF /* GoogleService-Info.plist in Resources */,
+				E52757BC203B331600B031BD /* GoogleService-Info.plist in Resources */,
 				701367C22031A14000B0CFFF /* Assets.xcassets in Resources */,
 				701367C02031A13500B0CFFF /* Main.storyboard in Resources */,
 			);
