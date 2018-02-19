@@ -1,7 +1,7 @@
 # Setup
 
 ```
-pod install
+$ make setup
 ```
 
 add `GoogleService-Info.plist` to `MVPSample/`.
