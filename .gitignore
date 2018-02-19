@@ -3,3 +3,5 @@ GoogleService-Info.plist
 xcuserdata
 .idea
 *.generated.swift
+vendor/bundle
+.bundle
