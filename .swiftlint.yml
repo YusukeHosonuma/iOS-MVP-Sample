@@ -3,7 +3,9 @@ disabled_rules:
   - force_try
   - identifier_name
   - line_length
+  - file_length
 excluded:
   - Carthage
   - Pods
   - R.generated.swift
+  - vendor/bundle
