@@ -18,7 +18,7 @@ platform :ios do
     build_app(
       workspace: "MVPSample.xcworkspace", 
       scheme: "MVPSample",
-      configuration: "Debug",
+      configuration: "Release",
       export_xcargs: "-allowProvisioningUpdates",
     )
   end
