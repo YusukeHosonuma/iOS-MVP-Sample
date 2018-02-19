@@ -5,3 +5,4 @@ xcuserdata
 *.generated.swift
 vendor/bundle
 .bundle
+fastlane/report.xml
