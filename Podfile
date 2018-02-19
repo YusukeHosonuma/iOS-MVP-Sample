@@ -12,7 +12,8 @@ target 'MVPSample' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
-
+  pod 'PromisesSwift', '~> 1.0'
+  
   script_phase :name => '1. R.swift',
                :script => '"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT"',
                :execution_position => :before_compile
