@@ -24,7 +24,7 @@ class LoginPresenter {
 
     init(view: LoginViewProtocol, model: AuthenticationProtocol) {
         self.view = view
-        self.authentication = model
+        authentication = model
     }
 
     func tapLoginButton() {
@@ -53,4 +53,3 @@ class LoginPresenter {
         }
     }
 }
-
