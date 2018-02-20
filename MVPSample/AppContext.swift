@@ -14,4 +14,5 @@ class AppContext {
     fileprivate init() {}
 
     let todoList = TodoList()
+    let authentication = Authentication()
 }
