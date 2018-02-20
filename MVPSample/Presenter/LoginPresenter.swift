@@ -15,7 +15,7 @@ protocol LoginViewProtocol: LoadingViewProtocol {
 
     func toList()
     func showLoginError(message: String)
-    func showSignupError()
+    func showSignupError(message: String)
     func showSignupSuccessDialog()
 }
 
@@ -43,8 +43,8 @@ class LoginPresenter {
         view.showLoading(message: "サインアップ中")
         auth.signup(email: view.email, password: view.password).then { _ in
             self.view.showSignupSuccessDialog()
-        }.catch { _ in
-            self.view.showSignupError()
+        }.catch { error in
+            self.view.showSignupError(message: error.localizedDescription)
         }.always {
             self.view.hideLoading()
         }
