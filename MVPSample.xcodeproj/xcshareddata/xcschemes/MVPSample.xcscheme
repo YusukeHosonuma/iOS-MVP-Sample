@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "701367CA2031A14100B0CFFF"
+               BuildableName = "MVPSampleTests.xctest"
+               BlueprintName = "MVPSampleTests"
+               ReferencedContainer = "container:MVPSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "701367B62031A13500B0CFFF"
+            BuildableName = "MVPSample.app"
+            BlueprintName = "MVPSample"
+            ReferencedContainer = "container:MVPSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,6 +80,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "701367B62031A13500B0CFFF"
+            BuildableName = "MVPSample.app"
+            BlueprintName = "MVPSample"
+            ReferencedContainer = "container:MVPSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

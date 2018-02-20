@@ -15,17 +15,17 @@ enum LoginError: Error {
 }
 
 protocol AuthenticationProtocol {
-    func login(email: String, password: String) -> Promise<User>
-    func signup(email: String, password: String) -> Promise<User>
+    func login(email: String, password: String) -> Promise<MVPUser>
+    func signup(email: String, password: String) -> Promise<MVPUser>
 }
 
 // TODO: ちゃんとエラードメインを変換してあげた方がよい
 class Authentication: AuthenticationProtocol {
-    func login(email: String, password: String) -> Promise<User> {
-        return Promise<User>(on: .main) { fulfill, reject in
+    func login(email: String, password: String) -> Promise<MVPUser> {
+        return Promise<MVPUser>(on: .main) { fulfill, reject in
             Auth.auth().signIn(withEmail: email, password: password) { user, error in
                 if let user = user {
-                    fulfill(user)
+                    fulfill(MVPUser(user))
                 } else {
                     reject(error!)
                 }
@@ -33,11 +33,11 @@ class Authentication: AuthenticationProtocol {
         }
     }
 
-    func signup(email: String, password: String) -> Promise<User> {
-        return Promise<User>(on: .main) { fulfill, reject in
+    func signup(email: String, password: String) -> Promise<MVPUser> {
+        return Promise<MVPUser>(on: .main) { fulfill, reject in
             Auth.auth().createUser(withEmail: email, password: password) { user, error in
                 if let user = user {
-                    fulfill(user)
+                    fulfill(MVPUser(user))
                 } else {
                     reject(error!)
                 }
