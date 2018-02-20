@@ -7,49 +7,46 @@
 //
 
 import Foundation
+import Promises
 
 protocol LoginViewProtocol: LoadingViewProtocol {
     var email: String { get }
     var password: String { get }
 
     func toList()
-    func showLoginError()
+    func showLoginError(message: String)
     func showSignupError()
     func showSignupSuccessDialog()
 }
 
 class LoginPresenter {
     let view: LoginViewProtocol
-    let authentication: AuthenticationProtocol
+    let auth: AuthenticationProtocol
 
-    init(view: LoginViewProtocol, model: AuthenticationProtocol) {
+    init(view: LoginViewProtocol, auth: AuthenticationProtocol) {
         self.view = view
-        authentication = model
+        self.auth = auth
     }
 
     func tapLoginButton() {
         view.showLoading(message: "ログイン中")
-        authentication.login(email: view.email, password: view.password) { result in
+        auth.login(email: view.email, password: view.password).then { _ in
+            self.view.toList()
+        }.catch { error in
+            self.view.showLoginError(message: error.localizedDescription)
+        }.always {
             self.view.hideLoading()
-            switch result {
-            case .success:
-                self.view.toList()
-            case .error:
-                self.view.showLoginError()
-            }
         }
     }
 
     func tapSignupButton() {
         view.showLoading(message: "サインアップ中")
-        authentication.signup(email: view.email, password: view.password) { result in
+        auth.signup(email: view.email, password: view.password).then { _ in
+            self.view.showSignupSuccessDialog()
+        }.catch { _ in
+            self.view.showSignupError()
+        }.always {
             self.view.hideLoading()
-            switch result {
-            case .success:
-                self.view.showSignupSuccessDialog()
-            case .error:
-                self.view.showSignupError()
-            }
         }
     }
 }
