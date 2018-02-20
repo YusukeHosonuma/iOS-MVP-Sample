@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = LoginPresenter(view: self, model: Authentication())
+        presenter = LoginPresenter(view: self, auth: appContext.authentication)
     }
 
     // MARK: - Action
@@ -46,8 +46,8 @@ extension LoginViewController: LoginViewProtocol {
         performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
     }
 
-    func showLoginError() {
-        let alert = UIAlertController(title: "エラー", message: "ログインに失敗しました。", preferredStyle: .alert)
+    func showLoginError(message: String) {
+        let alert = UIAlertController(title: "ログインに失敗しました。", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
