@@ -47,23 +47,27 @@ extension LoginViewController: LoginViewProtocol {
     }
 
     func showLoginError(message: String) {
-        let alert = UIAlertController(title: "ログインに失敗しました。", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        AlertBuilder()
+            .title("ログインに失敗しました。")
+            .message(message)
+            .action("OK")
+            .show(self, animated: true)
     }
 
-    func showSignupError() {
-        let alert = UIAlertController(title: "エラー", message: "サインアップに失敗しました。", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+    func showSignupError(message: String) {
+        AlertBuilder()
+            .title("サインアップに失敗しました。")
+            .message(message)
+            .action("OK")
+            .show(self, animated: true)
     }
 
     func showSignupSuccessDialog() {
         // TODO: メールアドレス認証を必須にしたい
-        let alert = UIAlertController(title: "新規登録完了",
-                                      message: "ログインを行ってください。",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        AlertBuilder()
+            .title("新規登録完了")
+            .message("ログインを行ってください。")
+            .action("OK")
+            .show(self, animated: true)
     }
 }
