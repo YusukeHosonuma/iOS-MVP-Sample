@@ -13,7 +13,6 @@
 		701367C02031A13500B0CFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701367BE2031A13500B0CFFF /* Main.storyboard */; };
 		701367C22031A14000B0CFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 701367C12031A14000B0CFFF /* Assets.xcassets */; };
 		701367C52031A14000B0CFFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701367C32031A14000B0CFFF /* LaunchScreen.storyboard */; };
-		701367D02031A14100B0CFFF /* MVPSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367CF2031A14100B0CFFF /* MVPSampleTests.swift */; };
 		701367DB2031A14100B0CFFF /* MVPSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367DA2031A14100B0CFFF /* MVPSampleUITests.swift */; };
 		701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367E82031A53B00B0CFFF /* LoginViewController.swift */; };
 		701367EB2031AC1D00B0CFFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 701367EA2031AC1D00B0CFFF /* GoogleService-Info.plist */; };
@@ -65,7 +64,6 @@
 		701367C42031A14000B0CFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		701367C62031A14000B0CFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701367CB2031A14100B0CFFF /* MVPSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		701367CF2031A14100B0CFFF /* MVPSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSampleTests.swift; sourceTree = "<group>"; };
 		701367D12031A14100B0CFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701367D62031A14100B0CFFF /* MVPSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		701367DA2031A14100B0CFFF /* MVPSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSampleUITests.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				E5F84CF9203C713900105EAF /* Presenter */,
-				701367CF2031A14100B0CFFF /* MVPSampleTests.swift */,
 				701367D12031A14100B0CFFF /* Info.plist */,
 			);
 			path = MVPSampleTests;
@@ -660,7 +657,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F84CFB203C715600105EAF /* LoginPresenterTests.swift in Sources */,
-				701367D02031A14100B0CFFF /* MVPSampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
