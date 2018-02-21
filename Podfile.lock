@@ -1,5 +1,6 @@
 PODS:
   - CodableFirebase (0.0.6)
+  - Cuckoo (0.11.0)
   - Firebase/Auth (4.8.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.1)
@@ -55,6 +56,7 @@ PODS:
 
 DEPENDENCIES:
   - CodableFirebase
+  - Cuckoo (from `https://github.com/Brightify/Cuckoo.git`, branch `master`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -64,8 +66,19 @@ DEPENDENCIES:
   - SwiftFormat/CLI
   - SwiftLint
 
+EXTERNAL SOURCES:
+  Cuckoo:
+    :branch: master
+    :git: https://github.com/Brightify/Cuckoo.git
+
+CHECKOUT OPTIONS:
+  Cuckoo:
+    :commit: f5093adcae11b54d891b9ef9ebbeb0f2300233c2
+    :git: https://github.com/Brightify/Cuckoo.git
+
 SPEC CHECKSUMS:
   CodableFirebase: 5b541b593f279cc5afd9f174ecbc92bc2e72e964
+  Cuckoo: 8b52764c70febbb16ea35b6ae1b568a59b06231b
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
@@ -84,6 +97,6 @@ SPEC CHECKSUMS:
   SwiftFormat: f96d738ff37906fa1f32a99c8d3417a7856a9b80
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: b43861332192360d487daf14755367e9ae40356f
+PODFILE CHECKSUM: 8715507f06ba06c097873784f81e383a80bff1a2
 
 COCOAPODS: 1.4.0
