@@ -6,3 +6,5 @@ xcuserdata
 vendor/bundle
 .bundle
 fastlane/report.xml
+fastlane/**/report.html
+fastlane/**/report.junit
