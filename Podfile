@@ -19,16 +19,17 @@ target 'MVPSample' do
                :execution_position => :before_compile
   
   script_phase :name => '2. SwiftFormat',
-               :script => '"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" "${SRCROOT}"',
+               :script => '"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" "${SRCROOT}/MVPSample"',
                :execution_position => :before_compile
   
   script_phase :name => '3. SwiftLint',
                :script => '"${PODS_ROOT}/SwiftLint/swiftlint"',
                :execution_position => :before_compile
-               
+
   target 'MVPSampleTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Cuckoo', :git => 'https://github.com/Brightify/Cuckoo.git',
+                  :branch => 'master'
   end
 
   target 'MVPSampleUITests' do
