@@ -10,8 +10,8 @@ import Foundation
 import Promises
 
 protocol LoginViewProtocol: LoadingViewProtocol {
-    var email: String { get }
-    var password: String { get }
+    var email: String { get set }
+    var password: String { get set }
 
     func toList()
     func showLoginError(message: String)
@@ -20,7 +20,7 @@ protocol LoginViewProtocol: LoadingViewProtocol {
 }
 
 class LoginPresenter {
-    let view: LoginViewProtocol
+    var view: LoginViewProtocol
     let auth: AuthenticationProtocol
 
     init(view: LoginViewProtocol, auth: AuthenticationProtocol) {
@@ -31,6 +31,8 @@ class LoginPresenter {
     func tapLoginButton() {
         view.showLoading(message: "ログイン中")
         auth.login(email: view.email, password: view.password).then { _ in
+            self.view.email = ""
+            self.view.password = ""
             self.view.toList()
         }.catch { error in
             self.view.showLoginError(message: error.localizedDescription)
