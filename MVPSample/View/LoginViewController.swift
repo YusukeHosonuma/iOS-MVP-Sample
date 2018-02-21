@@ -35,11 +35,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewProtocol {
     var email: String {
-        return emailText.text ?? ""
+        get { return emailText.text ?? "" }
+        set { emailText.text = newValue }
     }
 
     var password: String {
-        return passwordText.text ?? ""
+        get { return passwordText.text ?? "" }
+        set { passwordText.text = newValue }
     }
 
     func toList() {
