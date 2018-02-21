@@ -30,7 +30,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        presenter = TodoListPresenter(view: self, todoList: appContext.todoList)
+        presenter = TodoListPresenter(view: self, todoList: appContext.todoList, auth: appContext.authentication)
         presenter.listen()
     }
 
@@ -42,6 +42,10 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     // MARK: - Action
+
+    @IBAction func tapLogoutButton(_: Any) {
+        presenter.tapLogoutButton()
+    }
 
     @IBAction func tapAddButton(_: Any) {
         presenter.tapAddButton()
@@ -78,11 +82,23 @@ extension TodoListViewController: TodoListViewProtocol {
         tableView.reloadData()
     }
 
+    func moveToBack() {
+        dismiss(animated: true, completion: nil)
+    }
+
     func moveToAdd() {
         performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
     }
 
     func moveToEdit(_ todo: Todo) {
         performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
+    }
+
+    func showLogoutErrorDialog(message: String) {
+        AlertBuilder()
+            .title("ログアウト")
+            .message(message)
+            .action("OK")
+            .show(self, animated: true)
     }
 }
