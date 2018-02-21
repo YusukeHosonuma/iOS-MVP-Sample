@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		568EE456A22D09E4A685D6B2 /* Pods_MVPSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */; };
-		5D035C28968F6D855EA5B4AA /* Pods_MVPSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */; };
 		701367BB2031A13500B0CFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367BA2031A13500B0CFFF /* AppDelegate.swift */; };
 		701367C02031A13500B0CFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701367BE2031A13500B0CFFF /* Main.storyboard */; };
 		701367C22031A14000B0CFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 701367C12031A14000B0CFFF /* Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */; };
 		70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */; };
 		A830BB6B4319AC1C920D309A /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */; };
+		BD262364655453635FBABE18 /* Pods_MVPSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */; };
 		E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCEC720386305009E7F9E /* Firebase+.swift */; };
 		E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECC203867C2009E7F9E /* Authentication.swift */; };
 		E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECF20386889009E7F9E /* LoginPresenter.swift */; };
@@ -56,7 +56,6 @@
 		0AA3C56150DA4D9D202D4C3F /* Pods-MVPSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		3AE815C81F662220CBF89F92 /* Pods-MVPSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D112122E8542FE09F3EA454 /* Pods-MVPSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701367B72031A13500B0CFFF /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		701367BA2031A13500B0CFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		701367BF2031A13500B0CFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		7642EB0A2C430918D680740F /* Pods-MVPSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50CCEC720386305009E7F9E /* Firebase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+.swift"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D035C28968F6D855EA5B4AA /* Pods_MVPSampleUITests.framework in Frameworks */,
+				BD262364655453635FBABE18 /* Pods_MVPSampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			children = (
 				F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */,
 				C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */,
-				603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */,
+				95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -429,8 +429,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\"";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/MVPSample\"";
 		};
 		2A5473AE20C11D1968390F49 /* [CP-User] 1. R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -504,9 +503,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -827,10 +829,7 @@
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b16cf7e5-6965-4292-9fae-d5d163f6e898";
@@ -850,10 +849,7 @@
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5ebe6fae-c9ac-4bbf-aab8-739a818d79af";
@@ -867,16 +863,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AE815C81F662220CBF89F92 /* Pods-MVPSampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -889,16 +881,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0AA3C56150DA4D9D202D4C3F /* Pods-MVPSampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -914,11 +902,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -934,11 +918,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
