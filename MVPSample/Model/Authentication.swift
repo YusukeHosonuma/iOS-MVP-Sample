@@ -14,11 +14,6 @@ enum LoginError: Error {
     case unknown
 }
 
-protocol AuthenticationProtocol {
-    func login(email: String, password: String) -> Promise<MVPUser>
-    func signup(email: String, password: String) -> Promise<MVPUser>
-}
-
 // TODO: ちゃんとエラードメインを変換してあげた方がよい
 class Authentication: AuthenticationProtocol {
     func login(email: String, password: String) -> Promise<MVPUser> {

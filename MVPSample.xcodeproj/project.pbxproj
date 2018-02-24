@@ -27,8 +27,12 @@
 		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
+		E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */; };
 		E52CA46E203C7E1900B66671 /* MVPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA46D203C7E1900B66671 /* MVPUser.swift */; };
+		E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */; };
+		E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
+		E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */; };
 		E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3920398D6B00A9C90E /* AppContext.swift */; };
 		E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3C2039917D00A9C90E /* R.generated.swift */; };
 		E5F84CF8203C6CE300105EAF /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F84CF7203C6CE300105EAF /* AlertBuilder.swift */; };
@@ -83,8 +87,12 @@
 		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
+		E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterCuckooTests.swift; sourceTree = "<group>"; };
 		E52CA46D203C7E1900B66671 /* MVPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUser.swift; sourceTree = "<group>"; };
+		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		E5E31E3920398D6B00A9C90E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		E5E31E3C2039917D00A9C90E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E5F84CF7203C6CE300105EAF /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 			children = (
 				E5F84CF9203C713900105EAF /* Presenter */,
 				701367D12031A14100B0CFFF /* Info.plist */,
+				E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */,
 			);
 			path = MVPSampleTests;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E50CCECC203867C2009E7F9E /* Authentication.swift */,
+				E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */,
 				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
@@ -234,6 +244,7 @@
 				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
 				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
 				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
+				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -260,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F84CFA203C715600105EAF /* LoginPresenterTests.swift */,
+				E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 			buildConfigurationList = 701367E22031A14100B0CFFF /* Build configuration list for PBXNativeTarget "MVPSampleTests" */;
 			buildPhases = (
 				594D62DA38F68C8181B576EF /* [CP] Check Pods Manifest.lock */,
+				E5C27B0C203DDF2C005EACE3 /* ShellScript */,
 				701367C72031A14100B0CFFF /* Sources */,
 				701367C82031A14100B0CFFF /* Frameworks */,
 				701367C92031A14100B0CFFF /* Resources */,
@@ -612,6 +625,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5C27B0C203DDF2C005EACE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/MVPSample/Presenter/LoginViewProtocol.swift",
+				"$(SRCROOT)/MVPSample/Model/AuthenticationProtocol.swift",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/MVPSampleTests/GeneratedMocks.swift\"\n\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\"";
+		};
 		EC1DD754895923C951F6EC5C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +666,7 @@
 				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
 				E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */,
 				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
+				E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */,
 				E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
 				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
@@ -649,6 +678,7 @@
 				701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */,
 				E5F84CF8203C6CE300105EAF /* AlertBuilder.swift in Sources */,
 				70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */,
+				E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */,
 				E5D96EE620393055009314C8 /* Todo.swift in Sources */,
 				701367BB2031A13500B0CFFF /* AppDelegate.swift in Sources */,
 			);
@@ -659,6 +689,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F84CFB203C715600105EAF /* LoginPresenterTests.swift in Sources */,
+				E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */,
+				E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,7 +861,10 @@
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b16cf7e5-6965-4292-9fae-d5d163f6e898";
@@ -849,7 +884,10 @@
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5ebe6fae-c9ac-4bbf-aab8-739a818d79af";
@@ -868,7 +906,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -886,7 +928,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -902,7 +948,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -918,7 +968,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MVPSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MVPSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
