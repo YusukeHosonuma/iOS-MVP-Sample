@@ -28,6 +28,8 @@ target 'MVPSample' do
 
   target 'MVPSampleTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'  
     pod 'Cuckoo', :git => 'https://github.com/Brightify/Cuckoo.git',
                   :branch => 'master'
   end
