@@ -44,9 +44,11 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Nimble (7.0.3)
   - PromisesObjC (1.0.2)
   - PromisesSwift (1.0.2):
     - PromisesObjC (= 1.0.2)
+  - Quick (1.2.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -60,7 +62,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Nimble
   - PromisesSwift (~> 1.0)
+  - Quick
   - R.swift
   - SVProgressHUD
   - SwiftFormat/CLI
@@ -89,14 +93,16 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   PromisesObjC: 5cb99f8b988db9461cd3025cab5cc17752873a5c
   PromisesSwift: a972cb5ca9780fb7f805e9c2d69e7efd417a0523
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   SwiftFormat: f96d738ff37906fa1f32a99c8d3417a7856a9b80
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: 6a09662796e9f432095f072da3fc4c534b79b116
+PODFILE CHECKSUM: bfae1ed0670af3c42a319c58e4f34f4d92febc0f
 
 COCOAPODS: 1.4.0
