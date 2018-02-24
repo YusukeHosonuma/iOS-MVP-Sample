@@ -34,4 +34,8 @@ extension Todo {
     var firebaseValue: Any {
         return try! FirebaseEncoder().encode(self)
     }
+
+    func isMatch(_ text: String) -> Bool {
+        return title.localizedCaseInsensitiveContains(text)
+    }
 }

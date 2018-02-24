@@ -20,9 +20,10 @@ extension TodoListCell {
     }
 }
 
-class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet var tableView: UITableView!
 
+    @IBOutlet var searchBar: UISearchBar!
     var presenter: TodoListPresenter!
     var todos: [Todo]?
 
@@ -30,6 +31,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         presenter = TodoListPresenter(view: self, todoList: appContext.todoList, auth: appContext.authentication)
         presenter.listen()
     }
@@ -68,6 +70,13 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.selectRow(at: indexPath.row)
+    }
+
+    // MARK: UISearchBarDelegate
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange _: String) {
+        guard let text = searchBar.text else { preconditionFailure() }
+        presenter.didChangeSearchText(text)
     }
 }
 

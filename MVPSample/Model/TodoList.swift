@@ -13,6 +13,8 @@ import Foundation
 class TodoList {
     var todoRef: DatabaseReference = Database.database().reference().child("todo")
 
+    var latest: [Todo] = []
+
     func add(todo: Todo) {
         todoRef.childByAutoId().setValue(todo.firebaseValue)
     }
@@ -29,6 +31,7 @@ class TodoList {
                 let value = $0.value
                 return Todo(key: key, title: value.title, done: value.done)
             }
+            self.latest = xs
             f(xs)
         }
     }
