@@ -241,10 +241,10 @@
 		E50CCECE20386852009E7F9E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
 				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
 				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
 				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
-				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";

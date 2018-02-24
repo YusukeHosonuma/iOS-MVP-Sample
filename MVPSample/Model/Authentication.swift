@@ -28,6 +28,15 @@ class Authentication: AuthenticationProtocol {
         }
     }
 
+    func logout() -> Bool {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            return false
+        }
+        return true
+    }
+
     func signup(email: String, password: String) -> Promise<MVPUser> {
         return Promise<MVPUser>(on: .main) { fulfill, reject in
             Auth.auth().createUser(withEmail: email, password: password) { user, error in
