@@ -29,6 +29,7 @@
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
 		E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */; };
 		E52CA46E203C7E1900B66671 /* MVPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA46D203C7E1900B66671 /* MVPUser.swift */; };
+		E52FCDC920416609000A3D45 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52FCDC820416609000A3D45 /* TodoTests.swift */; };
 		E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */; };
 		E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
@@ -89,6 +90,7 @@
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
 		E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterCuckooTests.swift; sourceTree = "<group>"; };
 		E52CA46D203C7E1900B66671 /* MVPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUser.swift; sourceTree = "<group>"; };
+		E52FCDC820416609000A3D45 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F84CF9203C713900105EAF /* Presenter */,
+				E52FCDC7204165D2000A3D45 /* Entity */,
 				701367D12031A14100B0CFFF /* Info.plist */,
 				E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */,
 			);
@@ -263,6 +266,14 @@
 			children = (
 				E5D96EE520393055009314C8 /* Todo.swift */,
 				E52CA46D203C7E1900B66671 /* MVPUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E52FCDC7204165D2000A3D45 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E52FCDC820416609000A3D45 /* TodoTests.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -691,6 +702,7 @@
 				E5F84CFB203C715600105EAF /* LoginPresenterTests.swift in Sources */,
 				E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */,
 				E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */,
+				E52FCDC920416609000A3D45 /* TodoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
