@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		568EE456A22D09E4A685D6B2 /* Pods_MVPSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */; };
-		5D035C28968F6D855EA5B4AA /* Pods_MVPSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */; };
 		701367BB2031A13500B0CFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701367BA2031A13500B0CFFF /* AppDelegate.swift */; };
 		701367C02031A13500B0CFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701367BE2031A13500B0CFFF /* Main.storyboard */; };
 		701367C22031A14000B0CFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 701367C12031A14000B0CFFF /* Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		70C9EC902031BB44004F4569 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */; };
 		70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */; };
 		A830BB6B4319AC1C920D309A /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */; };
+		BD262364655453635FBABE18 /* Pods_MVPSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */; };
 		E50CCEC820386305009E7F9E /* Firebase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCEC720386305009E7F9E /* Firebase+.swift */; };
 		E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECC203867C2009E7F9E /* Authentication.swift */; };
 		E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCECF20386889009E7F9E /* LoginPresenter.swift */; };
@@ -27,8 +27,12 @@
 		E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED420386948009E7F9E /* TodoListPresenter.swift */; };
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
+		E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */; };
 		E52CA46E203C7E1900B66671 /* MVPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA46D203C7E1900B66671 /* MVPUser.swift */; };
+		E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */; };
+		E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
+		E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */; };
 		E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3920398D6B00A9C90E /* AppContext.swift */; };
 		E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31E3C2039917D00A9C90E /* R.generated.swift */; };
 		E5F84CF8203C6CE300105EAF /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F84CF7203C6CE300105EAF /* AlertBuilder.swift */; };
@@ -56,7 +60,6 @@
 		0AA3C56150DA4D9D202D4C3F /* Pods-MVPSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		3AE815C81F662220CBF89F92 /* Pods-MVPSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D112122E8542FE09F3EA454 /* Pods-MVPSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701367B72031A13500B0CFFF /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		701367BA2031A13500B0CFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		701367BF2031A13500B0CFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		70DFDAB72031CB8300DE2F7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		7642EB0A2C430918D680740F /* Pods-MVPSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSampleUITests/Pods-MVPSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50CCEC720386305009E7F9E /* Firebase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+.swift"; sourceTree = "<group>"; };
@@ -83,8 +87,12 @@
 		E50CCED420386948009E7F9E /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
+		E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterCuckooTests.swift; sourceTree = "<group>"; };
 		E52CA46D203C7E1900B66671 /* MVPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUser.swift; sourceTree = "<group>"; };
+		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		E5E31E3920398D6B00A9C90E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		E5E31E3C2039917D00A9C90E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E5F84CF7203C6CE300105EAF /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
@@ -114,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D035C28968F6D855EA5B4AA /* Pods_MVPSampleUITests.framework in Frameworks */,
+				BD262364655453635FBABE18 /* Pods_MVPSampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +134,7 @@
 			children = (
 				F619D056B69CFA6874FBE58B /* Pods_MVPSample.framework */,
 				C435C4B8E0D93346EDB5407F /* Pods_MVPSampleTests.framework */,
-				603A498920923476BB152789 /* Pods_MVPSampleUITests.framework */,
+				95CA6A2C38DB4700D7CD478E /* Pods_MVPSampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				E5F84CF9203C713900105EAF /* Presenter */,
 				701367D12031A14100B0CFFF /* Info.plist */,
+				E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */,
 			);
 			path = MVPSampleTests;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E50CCECC203867C2009E7F9E /* Authentication.swift */,
+				E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */,
 				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
@@ -231,6 +241,7 @@
 		E50CCECE20386852009E7F9E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
 				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
 				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
 				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
@@ -260,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F84CFA203C715600105EAF /* LoginPresenterTests.swift */,
+				E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 			buildConfigurationList = 701367E22031A14100B0CFFF /* Build configuration list for PBXNativeTarget "MVPSampleTests" */;
 			buildPhases = (
 				594D62DA38F68C8181B576EF /* [CP] Check Pods Manifest.lock */,
+				E5C27B0C203DDF2C005EACE3 /* ShellScript */,
 				701367C72031A14100B0CFFF /* Sources */,
 				701367C82031A14100B0CFFF /* Frameworks */,
 				701367C92031A14100B0CFFF /* Resources */,
@@ -429,8 +442,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\"";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/MVPSample\"";
 		};
 		2A5473AE20C11D1968390F49 /* [CP-User] 1. R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -504,9 +516,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,6 +625,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPSample/Pods-MVPSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5C27B0C203DDF2C005EACE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/MVPSample/Presenter/LoginViewProtocol.swift",
+				"$(SRCROOT)/MVPSample/Model/AuthenticationProtocol.swift",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/MVPSampleTests/GeneratedMocks.swift\"\n\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\"";
+		};
 		EC1DD754895923C951F6EC5C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,6 +666,7 @@
 				E50CCED3203868CA009E7F9E /* Result.swift in Sources */,
 				E5E31E3D2039917D00A9C90E /* R.generated.swift in Sources */,
 				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
+				E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */,
 				E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
 				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
@@ -647,6 +678,7 @@
 				701367E92031A53B00B0CFFF /* LoginViewController.swift in Sources */,
 				E5F84CF8203C6CE300105EAF /* AlertBuilder.swift in Sources */,
 				70DFDAB82031CB8400DE2F7D /* UIViewController+.swift in Sources */,
+				E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */,
 				E5D96EE620393055009314C8 /* Todo.swift in Sources */,
 				701367BB2031A13500B0CFFF /* AppDelegate.swift in Sources */,
 			);
@@ -657,6 +689,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F84CFB203C715600105EAF /* LoginPresenterTests.swift in Sources */,
+				E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */,
+				E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AE815C81F662220CBF89F92 /* Pods-MVPSampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;
@@ -889,7 +923,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0AA3C56150DA4D9D202D4C3F /* Pods-MVPSampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P437HSA6PY;

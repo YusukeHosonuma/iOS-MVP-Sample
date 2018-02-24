@@ -3,6 +3,7 @@ GoogleService-Info.plist
 xcuserdata
 .idea
 *.generated.swift
+GeneratedMocks.swift
 vendor/bundle
 .bundle
 fastlane/report.xml
