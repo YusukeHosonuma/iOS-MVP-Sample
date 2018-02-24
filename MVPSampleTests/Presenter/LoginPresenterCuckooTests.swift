@@ -39,8 +39,8 @@ class LoginPresenterCuckooTests: XCTestCase {
         }
 
         let auth = MockAuthenticationProtocol()
-        stub(auth) { stub2 in
-            when(stub2.login(email: any(), password: any())).thenReturn(Promise<MVPUser> {
+        stub(auth) { stub in
+            when(stub.login(email: any(), password: any())).thenReturn(Promise<MVPUser> {
                 return MVPUser(displayName: "alice", email: "password")
             })
         }
