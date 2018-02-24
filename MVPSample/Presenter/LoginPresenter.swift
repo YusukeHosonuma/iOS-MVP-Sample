@@ -9,16 +9,6 @@
 import Foundation
 import Promises
 
-protocol LoginViewProtocol: LoadingViewProtocol {
-    var email: String { get }
-    var password: String { get }
-
-    func toList()
-    func showLoginError(message: String)
-    func showSignupError(message: String)
-    func showSignupSuccessDialog()
-}
-
 class LoginPresenter {
     let view: LoginViewProtocol
     let auth: AuthenticationProtocol
