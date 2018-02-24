@@ -31,10 +31,7 @@ class TodoListPresenter {
     }
 
     func didChangeSearchText(_ query: String) {
-        let xs = query.isEmpty
-            ? todoList.latest
-            : todoList.latest.filter { $0.isMatch(query) }
-        view.showList(todos: xs)
+        view.showList(todos: todoList.fetchWith(query: query))
     }
 
     func tapAddButton() {
