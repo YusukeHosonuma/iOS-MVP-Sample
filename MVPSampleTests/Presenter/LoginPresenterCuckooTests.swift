@@ -31,6 +31,8 @@ class LoginPresenterCuckooTests: XCTestCase {
         stub(view) { stub in
             when(stub.email.get).thenReturn("email")
             when(stub.password.get).thenReturn("password")
+            when(stub.email.set(any())).thenDoNothing()
+            when(stub.password.set(any())).thenDoNothing()
             when(stub.showLoading(message: any())).thenDoNothing()
             when(stub.toList()).thenDoNothing()
             when(stub.hideLoading()).then {
