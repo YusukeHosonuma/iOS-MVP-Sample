@@ -30,6 +30,10 @@ class TodoListPresenter {
         self.auth = auth
     }
 
+    func didChangeSearchText(_ query: String) {
+        view.showList(todos: todoList.fetchWith(query: query))
+    }
+
     func tapAddButton() {
         view.moveToAdd()
     }

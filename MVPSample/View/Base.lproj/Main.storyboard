@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HfW-nm-1yl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HfW-nm-1yl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14081.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-tN-zBV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="ZWr-eq-u1Z" customClass="TodoListCell" customModule="MVPSample" customModuleProvider="target">
@@ -142,27 +142,44 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-sO-I42">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="g8X-tN-zBV" firstAttribute="top" secondItem="YBN-Ye-Zmh" secondAttribute="top" id="5iy-Ik-yQq"/>
+                            <constraint firstItem="OWQ-sO-I42" firstAttribute="leading" secondItem="YBN-Ye-Zmh" secondAttribute="leading" id="5fh-Vc-cVg"/>
                             <constraint firstItem="YBN-Ye-Zmh" firstAttribute="trailing" secondItem="g8X-tN-zBV" secondAttribute="trailing" id="Nme-yw-nqE"/>
                             <constraint firstItem="YBN-Ye-Zmh" firstAttribute="bottom" secondItem="U2L-Yn-ie0" secondAttribute="bottom" id="PbK-hz-fqV"/>
                             <constraint firstAttribute="trailing" secondItem="U2L-Yn-ie0" secondAttribute="trailing" id="Zft-Mc-nsG"/>
+                            <constraint firstItem="OWQ-sO-I42" firstAttribute="trailing" secondItem="YBN-Ye-Zmh" secondAttribute="trailing" id="ZtH-Uz-cr8"/>
                             <constraint firstItem="g8X-tN-zBV" firstAttribute="leading" secondItem="YBN-Ye-Zmh" secondAttribute="leading" id="fam-Av-P6T"/>
                             <constraint firstItem="U2L-Yn-ie0" firstAttribute="top" secondItem="g8X-tN-zBV" secondAttribute="bottom" id="mio-cU-OXm"/>
+                            <constraint firstItem="OWQ-sO-I42" firstAttribute="top" secondItem="YBN-Ye-Zmh" secondAttribute="top" id="mkM-jT-R7U"/>
                             <constraint firstItem="U2L-Yn-ie0" firstAttribute="leading" secondItem="YBN-Ye-Zmh" secondAttribute="leading" id="qhk-HR-E5X"/>
+                            <constraint firstItem="g8X-tN-zBV" firstAttribute="top" secondItem="OWQ-sO-I42" secondAttribute="bottom" id="wtH-f0-y0Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YBN-Ye-Zmh"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="OWQ-sO-I42" id="plf-D1-8XQ"/>
+                        <outlet property="searchDisplayController" destination="iVN-Hm-hZT" id="6Cf-IA-Su1"/>
                         <outlet property="tableView" destination="g8X-tN-zBV" id="5Ld-cP-687"/>
                         <segue destination="hn7-QI-1HU" kind="show" identifier="toAdd" id="YlH-CX-PqA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0A4-3E-Xgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="iVN-Hm-hZT">
+                    <connections>
+                        <outlet property="delegate" destination="hkB-0M-VhX" id="dyf-Kg-Y8R"/>
+                        <outlet property="searchContentsController" destination="hkB-0M-VhX" id="pOf-RN-ki3"/>
+                        <outlet property="searchResultsDataSource" destination="hkB-0M-VhX" id="8xB-U0-GAk"/>
+                        <outlet property="searchResultsDelegate" destination="hkB-0M-VhX" id="mYS-an-Qt7"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1208.8" y="66.11694152923539"/>
+            <point key="canvasLocation" x="1207.5" y="65.492957746478879"/>
         </scene>
         <!--Todo Add View Controller-->
         <scene sceneID="kEz-LW-j0S">

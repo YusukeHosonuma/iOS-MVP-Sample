@@ -11,7 +11,15 @@ import FirebaseDatabase
 import Foundation
 
 class TodoList {
-    var todoRef: DatabaseReference = Database.database().reference().child("todo")
+    private var todoRef: DatabaseReference = Database.database().reference().child("todo")
+
+    private var latest: [Todo] = []
+
+    func fetchWith(query: String) -> [Todo] {
+        return query.isEmpty
+            ? latest
+            : latest.filter { $0.isMatch(query) }
+    }
 
     func add(todo: Todo) {
         todoRef.childByAutoId().setValue(todo.firebaseValue)
@@ -29,6 +37,7 @@ class TodoList {
                 let value = $0.value
                 return Todo(key: key, title: value.title, done: value.done)
             }
+            self.latest = xs
             f(xs)
         }
     }
