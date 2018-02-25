@@ -87,7 +87,7 @@ class LoginViewMock: LoginViewProtocol {
         self.password = password
     }
 
-    func toList() {
+    func move() {
         toList_ = true
     }
 

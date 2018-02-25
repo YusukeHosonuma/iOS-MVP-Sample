@@ -44,8 +44,11 @@ extension LoginViewController: LoginViewProtocol {
         set { passwordText.text = newValue }
     }
 
-    func toList() {
-        performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
+    func move(to: LoginViewNavigation) {
+        switch to {
+        case .list:
+            performSegue(withIdentifier: R.segue.loginViewController.toList, sender: nil)
+        }
     }
 
     func showLoginError(message: String) {
