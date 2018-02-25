@@ -239,8 +239,8 @@
 		E50CCECB203867B0009E7F9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E50CCECC203867C2009E7F9E /* Authentication.swift */,
 				E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */,
+				E50CCECC203867C2009E7F9E /* Authentication.swift */,
 				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
@@ -308,8 +308,8 @@
 		E571AABC20423E150018F768 /* TodoAdd */ = {
 			isa = PBXGroup;
 			children = (
-				E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */,
 				70651B58203262A7005FFFBF /* TodoAddViewController.swift */,
+				E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */,
 				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
 			);
 			path = TodoAdd;
@@ -683,8 +683,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/MVPSample/Presenter/LoginViewProtocol.swift",
+				"$(SRCROOT)/MVPSample/View/Login/LoginViewProtocol.swift",
 				"$(SRCROOT)/MVPSample/Model/AuthenticationProtocol.swift",
+				"$(SRCROOT)/MVPSample/View/TodoList/TodoListViewProtocol.swift",
+				"$(SRCROOT)/MVPSample/View/TodoAdd/TodoAddViewProtocol.swift",
 			);
 			outputPaths = (
 			);
