@@ -8,14 +8,14 @@
 
 import Foundation
 
-enum Navigation {
+enum TodoListViewNavigation {
     case back
     case add
     case edit(Todo)
 }
 
 protocol TodoListViewProtocol {
-    func move(to: Navigation)
+    func move(to: TodoListViewNavigation)
     func showList(todos: [Todo])
     func todo(at index: Int) -> Todo
     func showLogoutErrorDialog(message: String)
