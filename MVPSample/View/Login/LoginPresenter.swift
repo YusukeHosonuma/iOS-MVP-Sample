@@ -28,6 +28,12 @@ class LoginPresenter {
         self.auth = auth
     }
 
+    func show() {
+        if auth.isLogin() {
+            view.toList()
+        }
+    }
+
     func tapLoginButton() {
         view.showLoading(message: "ログイン中")
         auth.login(email: view.email, password: view.password).then { _ in

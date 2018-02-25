@@ -16,6 +16,10 @@ enum LoginError: Error {
 
 // TODO: ちゃんとエラードメインを変換してあげた方がよい
 class Authentication: AuthenticationProtocol {
+    func isLogin() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+
     func login(email: String, password: String) -> Promise<MVPUser> {
         return Promise<MVPUser>(on: .main) { fulfill, reject in
             Auth.auth().signIn(withEmail: email, password: password) { user, error in
