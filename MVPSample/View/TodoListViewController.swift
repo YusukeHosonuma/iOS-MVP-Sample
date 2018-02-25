@@ -81,6 +81,17 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 extension TodoListViewController: TodoListViewProtocol {
+    func move(to: Navigation) {
+        switch to {
+        case .back:
+            dismiss(animated: true, completion: nil)
+        case .add:
+            performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
+        case let .edit(todo):
+            performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
+        }
+    }
+
     func todo(at index: Int) -> Todo {
         guard let todo = self.todos?[index] else { preconditionFailure() }
         return todo
@@ -89,18 +100,6 @@ extension TodoListViewController: TodoListViewProtocol {
     func showList(todos: [Todo]) {
         self.todos = todos
         tableView.reloadData()
-    }
-
-    func moveToBack() {
-        dismiss(animated: true, completion: nil)
-    }
-
-    func moveToAdd() {
-        performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: nil)
-    }
-
-    func moveToEdit(_ todo: Todo) {
-        performSegue(withIdentifier: R.segue.todoListViewController.toAdd, sender: todo)
     }
 
     func showLogoutErrorDialog(message: String) {
