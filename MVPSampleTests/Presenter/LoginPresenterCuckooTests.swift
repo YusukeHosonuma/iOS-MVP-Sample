@@ -13,7 +13,6 @@ import Promises
 import XCTest
 
 class LoginPresenterCuckooTests: XCTestCase {
-
     override func setUp() {
         super.setUp()
     }
@@ -43,7 +42,7 @@ class LoginPresenterCuckooTests: XCTestCase {
         let auth = MockAuthenticationProtocol()
         stub(auth) { stub in
             when(stub.login(email: any(), password: any())).thenReturn(Promise<MVPUser> {
-                return MVPUser(displayName: "alice", email: "password")
+                MVPUser(displayName: "alice", email: "password")
             })
         }
 
