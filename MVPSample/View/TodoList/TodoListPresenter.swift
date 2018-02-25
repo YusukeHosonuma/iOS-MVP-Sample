@@ -9,16 +9,6 @@
 import FirebaseDatabase
 import Foundation
 
-// TODO: move系はまとめて種類をenumで表現したほうが良いかも
-protocol TodoListViewProtocol: LoadingViewProtocol {
-    func showList(todos: [Todo])
-    func moveToBack()
-    func moveToAdd()
-    func moveToEdit(_ todo: Todo)
-    func todo(at index: Int) -> Todo
-    func showLogoutErrorDialog(message: String)
-}
-
 class TodoListPresenter {
     let view: TodoListViewProtocol
     let todoList: TodoList
@@ -35,12 +25,12 @@ class TodoListPresenter {
     }
 
     func tapAddButton() {
-        view.moveToAdd()
+        view.move(to: .add)
     }
 
     func tapLogoutButton() {
         if auth.logout() {
-            view.moveToBack()
+            view.move(to: .back)
         } else {
             view.showLogoutErrorDialog(message: "ログアウトに失敗しました。")
         }
@@ -48,7 +38,7 @@ class TodoListPresenter {
 
     func selectRow(at index: Int) {
         let todo = view.todo(at: index)
-        view.moveToEdit(todo)
+        view.move(to: .edit(todo))
     }
 
     func listen() {
