@@ -14,9 +14,11 @@ enum Navigation {
     case edit(Todo)
 }
 
-protocol TodoListViewProtocol: LoadingViewProtocol {
+protocol TodoListViewProtocol {
     func move(to: Navigation)
     func showList(todos: [Todo])
     func todo(at index: Int) -> Todo
     func showLogoutErrorDialog(message: String)
+    func showLoading(message: String?)
+    func hideLoading()
 }

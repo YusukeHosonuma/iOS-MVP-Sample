@@ -10,12 +10,7 @@ import Foundation
 import SVProgressHUD
 import UIKit
 
-protocol LoadingViewProtocol {
-    func showLoading(message: String?)
-    func hideLoading()
-}
-
-extension UIViewController: LoadingViewProtocol {
+extension UIViewController {
     func showLoading(message: String?) {
         SVProgressHUD.show(withStatus: message)
     }
