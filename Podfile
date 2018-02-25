@@ -4,15 +4,20 @@ target 'MVPSample' do
   use_frameworks!
   inhibit_all_warnings!
 
+  # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+
+  # Other
   pod 'SVProgressHUD'
+  pod 'PromisesSwift', '~> 1.0'
+
+  # Tool
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
-  pod 'PromisesSwift', '~> 1.0'
   
   script_phase :name => '1. R.swift',
                :script => '"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT"',
