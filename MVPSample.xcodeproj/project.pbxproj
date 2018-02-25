@@ -28,6 +28,7 @@
 		E50CCED720386A93009E7F9E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED620386A93009E7F9E /* TodoList.swift */; };
 		E50CCED920386B5D009E7F9E /* TodoAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */; };
 		E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */; };
+		E526A38320423360009D3730 /* TodoSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E526A38220423360009D3730 /* TodoSpec.swift */; };
 		E52CA46E203C7E1900B66671 /* MVPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA46D203C7E1900B66671 /* MVPUser.swift */; };
 		E52FCDC920416609000A3D45 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52FCDC820416609000A3D45 /* TodoTests.swift */; };
 		E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */; };
@@ -89,6 +90,7 @@
 		E50CCED620386A93009E7F9E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddPresenter.swift; sourceTree = "<group>"; };
 		E511A7102041474500503A3D /* LoginPresenterCuckooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterCuckooTests.swift; sourceTree = "<group>"; };
+		E526A38220423360009D3730 /* TodoSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSpec.swift; sourceTree = "<group>"; };
 		E52CA46D203C7E1900B66671 /* MVPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUser.swift; sourceTree = "<group>"; };
 		E52FCDC820416609000A3D45 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				E52FCDC820416609000A3D45 /* TodoTests.swift */,
+				E526A38220423360009D3730 /* TodoSpec.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -529,10 +532,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVPSampleTests/Pods-MVPSampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -703,6 +710,7 @@
 				E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */,
 				E511A7112041474500503A3D /* LoginPresenterCuckooTests.swift in Sources */,
 				E52FCDC920416609000A3D45 /* TodoTests.swift in Sources */,
+				E526A38320423360009D3730 /* TodoSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
