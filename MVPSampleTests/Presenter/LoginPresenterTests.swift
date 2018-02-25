@@ -87,7 +87,7 @@ class LoginViewMock: LoginViewProtocol {
         self.password = password
     }
 
-    func move() {
+    func move(to _: LoginViewNavigation) {
         toList_ = true
     }
 
@@ -118,6 +118,10 @@ class AuthMock: AuthenticationProtocol {
 
     init(success: Bool) {
         self.success = success
+    }
+
+    func isLogin() -> Bool {
+        return false
     }
 
     func login(email _: String, password _: String) -> Promise<MVPUser> {
