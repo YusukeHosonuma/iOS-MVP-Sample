@@ -33,6 +33,7 @@
 		E52FCDC920416609000A3D45 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52FCDC820416609000A3D45 /* TodoTests.swift */; };
 		E54A514E2041499C006763D7 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */; };
 		E571AAB920423D9B0018F768 /* TodoListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571AAB820423D9B0018F768 /* TodoListViewProtocol.swift */; };
+		E571AAC020423F2A0018F768 /* TodoAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */; };
 		E5C27B10203DEB8F005EACE3 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */; };
 		E5D96EE620393055009314C8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96EE520393055009314C8 /* Todo.swift */; };
 		E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */; };
@@ -96,6 +97,7 @@
 		E52FCDC820416609000A3D45 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		E571AAB820423D9B0018F768 /* TodoListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewProtocol.swift; sourceTree = "<group>"; };
+		E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAddViewProtocol.swift; sourceTree = "<group>"; };
 		E5C27B0F203DEB8F005EACE3 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		E5D96EE520393055009314C8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		E571AABC20423E150018F768 /* TodoAdd */ = {
 			isa = PBXGroup;
 			children = (
+				E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */,
 				70651B58203262A7005FFFBF /* TodoAddViewController.swift */,
 				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
 			);
@@ -705,6 +708,7 @@
 				E50CCED720386A93009E7F9E /* TodoList.swift in Sources */,
 				E5DC5F8320413A0900D98567 /* LoginViewProtocol.swift in Sources */,
 				E5E31E3A20398D6B00A9C90E /* AppContext.swift in Sources */,
+				E571AAC020423F2A0018F768 /* TodoAddViewProtocol.swift in Sources */,
 				E50CCED020386889009E7F9E /* LoginPresenter.swift in Sources */,
 				E50CCED520386948009E7F9E /* TodoListPresenter.swift in Sources */,
 				E50CCECD203867C2009E7F9E /* Authentication.swift in Sources */,
