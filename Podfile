@@ -19,7 +19,7 @@ target 'MVPSample' do
                :execution_position => :before_compile
   
   script_phase :name => '2. SwiftFormat',
-               :script => '"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" "${SRCROOT}/MVPSample"',
+               :script => '"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" "${SRCROOT}/MVPSample" "${SRCROOT}/MVPSampleTests"',
                :execution_position => :before_compile
   
   script_phase :name => '3. SwiftLint',
