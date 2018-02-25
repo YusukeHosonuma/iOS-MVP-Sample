@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum LoginViewNavigation {
+    case list
+}
+
 protocol LoginViewProtocol {
     var email: String { get }
     var password: String { get }
@@ -15,7 +19,7 @@ protocol LoginViewProtocol {
     func showLoading(message: String?)
     func hideLoading()
 
-    func toList()
+    func move(to: LoginViewNavigation)
     func showLoginError(message: String)
     func showSignupError(message: String)
     func showSignupSuccessDialog()
