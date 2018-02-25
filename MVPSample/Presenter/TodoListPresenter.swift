@@ -9,19 +9,6 @@
 import FirebaseDatabase
 import Foundation
 
-enum Navigation {
-    case back
-    case add
-    case edit(Todo)
-}
-
-protocol TodoListViewProtocol: LoadingViewProtocol {
-    func move(to: Navigation)
-    func showList(todos: [Todo])
-    func todo(at index: Int) -> Todo
-    func showLogoutErrorDialog(message: String)
-}
-
 class TodoListPresenter {
     let view: TodoListViewProtocol
     let todoList: TodoList
