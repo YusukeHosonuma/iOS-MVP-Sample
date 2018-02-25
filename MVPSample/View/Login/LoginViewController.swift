@@ -10,7 +10,6 @@ import Firebase
 import FirebaseAuth
 import UIKit
 
-// TODO: ログイン状態を維持したい
 class LoginViewController: UIViewController {
     var presenter: LoginPresenter!
 
@@ -20,6 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LoginPresenter(view: self, auth: appContext.authentication)
+        presenter.show()
     }
 
     // MARK: - Action

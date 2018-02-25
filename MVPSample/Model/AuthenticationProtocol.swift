@@ -10,6 +10,7 @@ import Foundation
 import Promises
 
 protocol AuthenticationProtocol {
+    func isLogin() -> Bool
     func login(email: String, password: String) -> Promise<MVPUser>
     func signup(email: String, password: String) -> Promise<MVPUser>
 }
