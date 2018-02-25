@@ -81,7 +81,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 extension TodoListViewController: TodoListViewProtocol {
-    func move(to: Navigation) {
+    func move(to: TodoListViewNavigation) {
         switch to {
         case .back:
             dismiss(animated: true, completion: nil)
