@@ -172,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				E50CCEC9203866D1009E7F9E /* View */,
-				E50CCECE20386852009E7F9E /* Presenter */,
 				E50CCECB203867B0009E7F9E /* Model */,
 				E52CA46C203C7DF700B66671 /* Entity */,
 				E50CCED1203868B8009E7F9E /* Util */,
@@ -217,9 +216,9 @@
 		E50CCEC9203866D1009E7F9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				701367E82031A53B00B0CFFF /* LoginViewController.swift */,
-				70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */,
-				70651B58203262A7005FFFBF /* TodoAddViewController.swift */,
+				E571AABA20423DFE0018F768 /* Login */,
+				E571AABB20423E080018F768 /* TodoList */,
+				E571AABC20423E150018F768 /* TodoAdd */,
 				701367BE2031A13500B0CFFF /* Main.storyboard */,
 			);
 			path = View;
@@ -282,6 +281,35 @@
 				E526A38220423360009D3730 /* TodoSpec.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		E571AABA20423DFE0018F768 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				701367E82031A53B00B0CFFF /* LoginViewController.swift */,
+				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
+				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E571AABB20423E080018F768 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				70C9EC8F2031BB44004F4569 /* TodoListViewController.swift */,
+				E571AAB820423D9B0018F768 /* TodoListViewProtocol.swift */,
+				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		E571AABC20423E150018F768 /* TodoAdd */ = {
+			isa = PBXGroup;
+			children = (
+				70651B58203262A7005FFFBF /* TodoAddViewController.swift */,
+				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
+			);
+			path = TodoAdd;
 			sourceTree = "<group>";
 		};
 		E5F84CF9203C713900105EAF /* Presenter */ = {
