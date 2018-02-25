@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol TodoAddViewProtocol {
-    var titleText: String { get set }
-    func moveBack()
-}
-
 class TodoAddPresenter {
     var view: TodoAddViewProtocol
     let todo: Todo?
