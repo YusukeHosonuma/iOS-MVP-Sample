@@ -30,5 +30,6 @@ add `GoogleService-Info.plist` to `MVPSample/Resources`.
     - R.swift
     - SwiftLint
     - SwiftFormat
+    - LicensePlist
 - CI
     - Bitrise
