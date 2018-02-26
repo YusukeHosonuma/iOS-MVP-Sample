@@ -1,4 +1,4 @@
-# Setup
+## Setup
 
 ```
 $ make setup
@@ -6,7 +6,7 @@ $ make setup
 
 add `GoogleService-Info.plist` to `MVPSample/Resources`.
 
-# Technology Stack
+## Technology Stack
 
 - Swift 4.1 / Xcode 9.3 beta
 - MVP Architecture
@@ -33,3 +33,7 @@ add `GoogleService-Info.plist` to `MVPSample/Resources`.
     - LicensePlist
 - CI
     - Bitrise
+
+## License
+
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
