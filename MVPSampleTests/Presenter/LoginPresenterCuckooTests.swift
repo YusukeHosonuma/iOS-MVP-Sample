@@ -33,7 +33,7 @@ class LoginPresenterCuckooTests: XCTestCase {
             when(stub.email.set(any())).thenDoNothing()
             when(stub.password.set(any())).thenDoNothing()
             when(stub.showLoading(message: any())).thenDoNothing()
-            when(stub.toList()).thenDoNothing()
+            when(stub.move(to: any())).thenDoNothing()
             when(stub.hideLoading()).then {
                 exp.fulfill()
             }
@@ -59,6 +59,6 @@ class LoginPresenterCuckooTests: XCTestCase {
         //
         verify(view).showLoading(message: any())
         verify(view).hideLoading()
-        verify(view).toList()
+        verify(view).move(to: any())
     }
 }

@@ -18,12 +18,18 @@ class LoginPresenter {
         self.auth = auth
     }
 
+    func show() {
+        if auth.isLogin() {
+            view.move(to: .list)
+        }
+    }
+
     func tapLoginButton() {
         view.showLoading(message: "ログイン中")
         auth.login(email: view.email, password: view.password).then { _ in
             self.view.email = ""
             self.view.password = ""
-            self.view.toList()
+            self.view.move(to: .list)
         }.catch { error in
             self.view.showLoginError(message: error.localizedDescription)
         }.always {
