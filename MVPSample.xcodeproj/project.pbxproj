@@ -176,7 +176,6 @@
 		701367B92031A13500B0CFFF /* MVPSample */ = {
 			isa = PBXGroup;
 			children = (
-				E538BB252044666C001A6BF3 /* MVPSample.entitlements */,
 				E50CCEC9203866D1009E7F9E /* View */,
 				E50CCECB203867B0009E7F9E /* Model */,
 				E52CA46C203C7DF700B66671 /* Entity */,
@@ -233,6 +232,7 @@
 		E50CCECA20386700009E7F9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E538BB252044666C001A6BF3 /* MVPSample.entitlements */,
 				E571AAC1204455F50018F768 /* Settings.bundle */,
 				701367C32031A14000B0CFFF /* LaunchScreen.storyboard */,
 				701367C12031A14000B0CFFF /* Assets.xcassets */,
@@ -915,7 +915,7 @@
 			baseConfigurationReference = BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MVPSample/MVPSample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MVPSample/Resources/MVPSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P437HSA6PY;
@@ -939,7 +939,7 @@
 			baseConfigurationReference = E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MVPSample/MVPSample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MVPSample/Resources/MVPSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P437HSA6PY;
