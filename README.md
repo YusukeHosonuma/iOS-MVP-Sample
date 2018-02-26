@@ -17,6 +17,7 @@ add `GoogleService-Info.plist` to `MVPSample/Resources`.
     - Firebase
         - Auth
         - RealtimeDatabase
+        - Messaging
     - R.swift
     - Google/Promises
     - SVProgressHUD
