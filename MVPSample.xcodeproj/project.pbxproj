@@ -96,6 +96,7 @@
 		E526A38220423360009D3730 /* TodoSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSpec.swift; sourceTree = "<group>"; };
 		E52CA46D203C7E1900B66671 /* MVPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUser.swift; sourceTree = "<group>"; };
 		E52FCDC820416609000A3D45 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
+		E538BB252044666C001A6BF3 /* MVPSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MVPSample.entitlements; sourceTree = "<group>"; };
 		E54A514D2041499C006763D7 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		E571AAB820423D9B0018F768 /* TodoListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewProtocol.swift; sourceTree = "<group>"; };
 		E571AABF20423F2A0018F768 /* TodoAddViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAddViewProtocol.swift; sourceTree = "<group>"; };
@@ -231,6 +232,7 @@
 		E50CCECA20386700009E7F9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E538BB252044666C001A6BF3 /* MVPSample.entitlements */,
 				E571AAC1204455F50018F768 /* Settings.bundle */,
 				701367C32031A14000B0CFFF /* LaunchScreen.storyboard */,
 				701367C12031A14000B0CFFF /* Assets.xcassets */,
@@ -247,18 +249,6 @@
 				E50CCED620386A93009E7F9E /* TodoList.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E50CCECE20386852009E7F9E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				E50CCECF20386889009E7F9E /* LoginPresenter.swift */,
-				E50CCED420386948009E7F9E /* TodoListPresenter.swift */,
-				E50CCED820386B5D009E7F9E /* TodoAddPresenter.swift */,
-				E5DC5F8220413A0900D98567 /* LoginViewProtocol.swift */,
-				E571AAB820423D9B0018F768 /* TodoListViewProtocol.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		E50CCED1203868B8009E7F9E /* Util */ = {
@@ -421,6 +411,11 @@
 				TargetAttributes = {
 					701367B62031A13500B0CFFF = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					701367CA2031A14100B0CFFF = {
 						CreatedOnToolsVersion = 9.3;
@@ -611,6 +606,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -623,6 +619,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -918,11 +915,12 @@
 			baseConfigurationReference = BF5D7F4D0BC9D5AF065B333B /* Pods-MVPSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MVPSample/Resources/MVPSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -941,11 +939,12 @@
 			baseConfigurationReference = E7DBE106B9DB60A7E7154107 /* Pods-MVPSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MVPSample/Resources/MVPSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P437HSA6PY;
 				INFOPLIST_FILE = MVPSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
