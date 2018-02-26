@@ -13,8 +13,8 @@ enum LoginViewNavigation {
 }
 
 protocol LoginViewProtocol {
-    var email: String { get }
-    var password: String { get }
+    var email: String { get set }
+    var password: String { get set }
 
     func showLoading(message: String?)
     func hideLoading()
