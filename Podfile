@@ -18,7 +18,8 @@ target 'MVPSample' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
-  
+  pod 'LicensePlist'
+
   script_phase :name => '1. R.swift',
                :script => '"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT"',
                :execution_position => :before_compile
