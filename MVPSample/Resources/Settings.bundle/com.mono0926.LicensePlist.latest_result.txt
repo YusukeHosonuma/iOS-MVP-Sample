@@ -1,0 +1,103 @@
+name: CodableFirebase, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 0.0.6
+
+name: Cuckoo, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.11.0
+
+name: Firebase, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 4.8.0
+
+name: FirebaseAnalytics, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 4.0.5
+
+name: FirebaseAuth, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 4.4.1
+
+name: FirebaseCore, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 4.0.13
+
+name: FirebaseDatabase, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 4.1.3
+
+name: FirebaseInstanceID, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.0.8
+
+name: GoogleToolboxForMac, nameSpecified: 
+body: 
+                   …
+version: 2.1.3
+
+name: GTMSessionFetcher, nameSpecified: 
+body: 
+                   …
+version: 1.1.12
+
+name: leveldb-library, nameSpecified: 
+body: Copyright (c) 2011 T…
+version: 1.20
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 1.8.3
+
+name: nanopb, nameSpecified: 
+body: Copyright (c) 2011 P…
+version: 0.3.8
+
+name: Nimble, nameSpecified: 
+body: Apache License
+     …
+version: 7.0.3
+
+name: PromisesObjC, nameSpecified: 
+body: 
+                   …
+version: 1.0.2
+
+name: PromisesSwift, nameSpecified: 
+body: 
+                   …
+version: 1.0.2
+
+name: Quick, nameSpecified: 
+body: Apache License
+     …
+version: 1.2.0
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: SVProgressHUD, nameSpecified: 
+body: Copyright (c) 2011-2…
+version: 2.2.2
+
+name: SwiftFormat, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 0.33.1
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.25.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3
