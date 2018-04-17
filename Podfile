@@ -21,6 +21,9 @@ target 'MVPSample' do
   pod 'SwiftFormat/CLI'
   pod 'LicensePlist'
 
+  pod "HyperioniOS/Core", :configurations => ['Debug']
+  pod 'HyperioniOS/AttributesInspector', :configurations => ['Debug'] # Optional plugin
+
   script_phase :name => '1. R.swift',
                :script => '"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT"',
                :execution_position => :before_compile
