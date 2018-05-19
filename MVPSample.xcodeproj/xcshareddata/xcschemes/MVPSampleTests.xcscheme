@@ -39,6 +39,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "701367CA2031A14100B0CFFF"
+            BuildableName = "MVPSampleTests.xctest"
+            BlueprintName = "MVPSampleTests"
+            ReferencedContainer = "container:MVPSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
