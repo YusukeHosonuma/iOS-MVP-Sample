@@ -1,54 +1,46 @@
 PODS:
-  - CodableFirebase (0.0.6)
-  - Cuckoo (0.11.0)
-  - Firebase/Auth (4.8.0):
-    - Firebase/Core
-    - FirebaseAuth (= 4.4.1)
-  - Firebase/Core (4.8.0):
-    - FirebaseAnalytics (= 4.0.5)
-    - FirebaseCore (= 4.0.13)
-  - Firebase/Database (4.8.0):
-    - Firebase/Core
-    - FirebaseDatabase (= 4.1.3)
-  - Firebase/Messaging (4.8.0):
-    - Firebase/Core
-    - FirebaseMessaging (= 2.0.8)
-  - FirebaseAnalytics (4.0.5):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
+  - CodableFirebase (0.2.0)
+  - Cuckoo (0.11.3)
+  - Firebase/Auth (5.2.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.1)
+  - Firebase/Core (5.2.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.1)
+  - Firebase/CoreOnly (5.2.0):
+    - FirebaseCore (= 5.0.3)
+  - Firebase/Database (5.2.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.1)
+  - Firebase/Messaging (5.2.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.0.2)
+  - FirebaseAnalytics (5.0.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.4.1):
-    - FirebaseAnalytics (~> 4.0)
-    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+  - FirebaseAuth (5.0.1):
+    - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.13):
+  - FirebaseCore (5.0.3):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-  - FirebaseDatabase (4.1.3):
-    - FirebaseAnalytics (~> 4.0)
-    - FirebaseCore (~> 4.0)
+  - FirebaseDatabase (5.0.1):
+    - FirebaseCore (~> 5.0)
     - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (2.0.8):
-    - FirebaseCore (~> 4.0)
-  - FirebaseMessaging (2.0.8):
-    - FirebaseAnalytics (~> 4.0)
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
+  - FirebaseInstanceID (3.1.0):
+    - FirebaseCore (~> 5.0)
+  - FirebaseMessaging (3.0.2):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/Logger (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3)":
-    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
-  - GTMSessionFetcher/Core (1.1.12)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GTMSessionFetcher/Core (1.1.15)
   - HyperioniOS/AttributesInspector (1.0.2):
     - HyperioniOS/Core
   - HyperioniOS/Core (1.0.2)
@@ -59,18 +51,18 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - Nimble (7.0.3)
-  - PromisesObjC (1.0.2)
-  - PromisesSwift (1.0.2):
-    - PromisesObjC (= 1.0.2)
-  - Protobuf (3.5.0)
-  - Quick (1.2.0)
+  - Nimble (7.1.2)
+  - PromisesObjC (1.2.2)
+  - PromisesSwift (1.2.2):
+    - PromisesObjC (= 1.2.2)
+  - Protobuf (3.6.0)
+  - Quick (1.3.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - SVProgressHUD (2.2.2)
-  - SwiftFormat/CLI (0.33.1)
-  - SwiftLint (0.25.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftFormat/CLI (0.33.7)
+  - SwiftLint (0.25.1)
 
 DEPENDENCIES:
   - CodableFirebase
@@ -91,7 +83,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - CodableFirebase
     - Firebase
     - FirebaseAnalytics
@@ -124,36 +116,36 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Cuckoo:
-    :commit: f5093adcae11b54d891b9ef9ebbeb0f2300233c2
+    :commit: 0a5c4f7f1d9d56e57e81a9854e5b572ba1186350
     :git: https://github.com/Brightify/Cuckoo.git
 
 SPEC CHECKSUMS:
-  CodableFirebase: 5b541b593f279cc5afd9f174ecbc92bc2e72e964
-  Cuckoo: 8b52764c70febbb16ea35b6ae1b568a59b06231b
-  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
-  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
-  FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
-  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
-  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
-  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
-  FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
-  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
+  Cuckoo: 97522dd7ac6f18adba6022bdc74aa69e82ca691a
+  Firebase: 25ed0412036d7d008568d1fb4d2e9d81ea8a0a2c
+  FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
+  FirebaseAuth: 463b8ce33bd5d05f706dcd4615499e3212b4132b
+  FirebaseCore: a3c87242451633fff8490183898075ce77d168d2
+  FirebaseDatabase: 482bad9c2abd422bb2321194fb8c937e67426a89
+  FirebaseInstanceID: 05d779cbb97bd5bd5c51a38a903fc9cfe1b2454a
+  FirebaseMessaging: 6894b8fe0a0cf26c3b13dad729f1131654ae0bdb
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   HyperioniOS: 2397937925b2d57ec28182ac979879b0da2658ee
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   LicensePlist: 3fda61ebe060afc8fc6d995df34a91401af5a244
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  PromisesObjC: 5cb99f8b988db9461cd3025cab5cc17752873a5c
-  PromisesSwift: a972cb5ca9780fb7f805e9c2d69e7efd417a0523
-  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Nimble: 3835ba9f459daa6b347f8a8e110aaae8ca1920a8
+  PromisesObjC: 3db4112f796a05782b4442364748f9126fea0b88
+  PromisesSwift: a87c9b5fba61711bce16ac11d8d8bf96fc93fde0
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
-  SwiftFormat: f96d738ff37906fa1f32a99c8d3417a7856a9b80
-  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftFormat: 2e9b261a2ded97bc2aff2710c9826c6548a45bdb
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: 0501de0405bbf86a3df5d908a921fdd700e1e8b4
+PODFILE CHECKSUM: b57e80a7b3214ab10cb8c1a05a8be34e1c0db513
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
