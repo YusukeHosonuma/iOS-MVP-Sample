@@ -22,9 +22,9 @@ class Authentication: AuthenticationProtocol {
 
     func login(email: String, password: String) -> Promise<MVPUser> {
         return Promise<MVPUser>(on: .main) { fulfill, reject in
-            Auth.auth().signIn(withEmail: email, password: password) { user, error in
-                if let user = user {
-                    fulfill(MVPUser(user))
+            Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                if let result = result {
+                    fulfill(MVPUser(result.user))
                 } else {
                     reject(error!)
                 }
@@ -43,9 +43,9 @@ class Authentication: AuthenticationProtocol {
 
     func signup(email: String, password: String) -> Promise<MVPUser> {
         return Promise<MVPUser>(on: .main) { fulfill, reject in
-            Auth.auth().createUser(withEmail: email, password: password) { user, error in
-                if let user = user {
-                    fulfill(MVPUser(user))
+            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                if let result = result {
+                    fulfill(MVPUser(result.user))
                 } else {
                     reject(error!)
                 }

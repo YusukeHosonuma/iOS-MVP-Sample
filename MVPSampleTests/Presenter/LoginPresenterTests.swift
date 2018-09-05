@@ -125,7 +125,7 @@ class AuthMock: AuthenticationProtocol {
     }
 
     func login(email _: String, password _: String) -> Promise<MVPUser> {
-        return Promise<MVPUser> {
+        return Promise<MVPUser> { () -> MVPUser in
             guard self.success else { throw LoginError.unknown }
             return MVPUser(displayName: "alice", email: "password")
         }
